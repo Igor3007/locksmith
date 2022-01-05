@@ -1,0 +1,16 @@
+extends ../layouts/page
+
+include ../../blocks/modules/common/page-404/page-404.pug
+
+
+
+block variables
+  include ../../data/data.pug
+
+
+block content
+  .container
+    .page
+      .page__content.animate.fadein
+        +page-404
+

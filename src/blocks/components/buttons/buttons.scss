@@ -1,0 +1,137 @@
+.btn {
+
+    padding: 0.95em 2.6em 0.85em 2.6em;
+    background: $main;
+    color: #fff;
+    border: none;
+    border-radius: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: rem(130);
+    height: rem(60);
+
+
+    font-style: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: .3s cubic-bezier(.1, .82, .25, 1);
+
+    @media screen and (max-width: $w1440) {
+        height: 50px;
+        font-size: 13px;
+    }
+
+    @media screen and (max-width: $w1280) {
+        height: 45px;
+    }
+
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    &:active,
+    &:focus {
+        border: none;
+        outline: none;
+    }
+
+    &:disabled {
+        background-color: #9D9D9D;
+        color: #fff;
+        cursor: not-allowed;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+    & svg {
+        fill: #fff;
+        margin-right: 1em;
+    }
+
+    &.btn-full {
+        width: 100%;
+    }
+
+    &.btn-radius {
+        border-radius: 60px;
+    }
+
+    &.btn-bold {
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: rem(1)
+    }
+
+    &.btn-small {
+        height: rem(50);
+    }
+
+
+    &.btn-dark {
+        color: #fff;
+        background-color: $dark;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+
+    &.btn-line {
+        border: 1px solid $main;
+        background: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $main;
+
+        & svg {
+            fill: $main;
+            margin-right: 1em;
+        }
+
+        &:hover {
+            background-color: $main;
+            color: #fff !important;
+            border-color: $main;
+
+            & svg {
+                fill: #fff;
+            }
+        }
+    }
+
+
+    &.btn-shadow {
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+        background: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $main;
+
+        & svg {
+            fill: $main;
+            margin-right: 1em;
+        }
+
+        &:hover {
+            background-color: $main;
+            color: #fff !important;
+            border-color: $main;
+
+            & svg {
+                fill: #fff;
+            }
+        }
+    }
+
+
+}

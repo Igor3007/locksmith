@@ -1,0 +1,21 @@
+mixin our-services
+  section.section-our-services
+    .container
+      .our-services
+        .our-services__title Our Services
+        .our-services__list
+          each item in app.service
+            .our-services__item: +card-service(item)
+
+
+mixin card-service(data)
+  .card-service
+    .card-service__icon
+      picture
+        img(src=""+data.icon+"" alt="service")
+    .card-service__title= data.title 
+    .card-service__desc= data.desc
+    .card-service__link
+      a(href='#')
+        +icons('#ic_link-arrow')
+        span Learn more

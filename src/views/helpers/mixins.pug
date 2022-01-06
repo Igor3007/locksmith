@@ -1,6 +1,18 @@
 include ../../blocks/components/headers/headers 
 include ../../blocks/components/select/select
 
+mixin picture(url)
+  picture
+    source(srcset='/img/'+url+'.webp' type="image/webp" media='(min-width: 1200px)')
+    source(srcset='/img/crop/w1200/'+url+'.webp' type="image/webp" media='(min-width: 767px)')
+    source(srcset='/img/crop/w760/'+url+'.webp' type="image/webp" media='(min-width: 480px)')
+
+    source(srcset='/img/'+url+'.jpg' media='(min-width: 1200px)')
+    source(srcset='/img/crop/w1200/'+url+'.jpg' media='(min-width: 767px)')
+    source(srcset='/img/crop/w760/'+url+'.jpg' media='(min-width: 480px)')
+    img(src='/img/crop/w480/'+url+'.jpg ' loading='lazy' alt='Background')
+
+
 mixin icons(id, size)
   if size
     svg(width=''+size+'' height=''+size+'')

@@ -4,7 +4,7 @@
     width: 100%;
     padding-right: rem(15);
 
-    @media screen and (max-width: $w940) {
+    @media screen and (max-width: $w992) {
         flex-wrap: wrap;
     }
 
@@ -14,7 +14,7 @@
         &__all {
             margin-bottom: rem(15);
 
-            @media screen and (max-width: $w940) {
+            @media screen and (max-width: $w992) {
                 width: 100%;
             }
         }
@@ -23,7 +23,7 @@
 
     &__page {
 
-        @media screen and (max-width: $w940) {
+        @media screen and (max-width: $w992) {
             width: 100%;
             padding-top: rem(25);
         }
@@ -62,7 +62,7 @@
                     justify-content: center;
                     color: $black;
 
-                    @media screen and (max-width: $w580) {
+                    @media screen and (max-width: $w576) {
                         width: 45px;
                         height: 45px;
                     }

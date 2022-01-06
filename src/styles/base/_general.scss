@@ -1,5 +1,5 @@
 html {
-    font-family: 'Gilroy';
+    font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -7,8 +7,6 @@ html {
     background: #fff;
     color: #000;
     letter-spacing: normal;
-
-
 
     @media screen and (max-width: $w1440) {
         font-size: 15px;
@@ -108,8 +106,8 @@ main {
         padding: 0 rem(25);
     }
 
-    @media screen and (max-width: $w580) {
-        padding: 0 rem(15);
+    @media screen and (max-width: $w576) {
+        padding: 0 20px;
     }
 }
 
@@ -174,7 +172,7 @@ main {
 }
 
 .fancybox__nav {
-    @media screen and (max-width: $w580) {
+    @media screen and (max-width: $w576) {
         display: none !important;
     }
 }
@@ -183,23 +181,10 @@ main {
 /* ================== */
 
 @mixin section-title {
-    font-style: normal;
-    font-weight: normal;
-    font-size: rem(48);
-    line-height: 110%;
-    color: $black;
-
-    @media screen and (max-width: $w1280) {
-        font-size: rem(38);
-    }
-
-    @media screen and (max-width: $w1024) {
-        font-size: rem(36);
-    }
-
-    @media screen and (max-width: $w480) {
-        font-size: rem(30);
-    }
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 117.2%;
+    color: #1B1A1C;
 }
 
 @mixin section-subtitle {
@@ -222,7 +207,7 @@ main {
 @mixin section-padding {
     padding: rem(50) 0;
 
-    @media screen and (max-width: $w580) {
+    @media screen and (max-width: $w576) {
         padding: rem(30) 0;
     }
 }

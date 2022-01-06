@@ -1,0 +1,23 @@
+.section-advantages-block {
+    @include section-padding;
+}
+
+
+.advantages-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    &__icon {
+        margin-right: 15px;
+        width: 49px;
+        min-width: 49px;
+    }
+}
+
+.advantages-block {
+    &__title {
+        @include section-title;
+        padding-bottom: 25px;
+    }
+}

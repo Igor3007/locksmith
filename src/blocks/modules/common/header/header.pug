@@ -1,40 +1,34 @@
-.header
+.header-top
+  .header-top__wrp
+    +icons('#ic_call24')
+    span Emergency Locksmith
+    +icons('#ic_arr-right', 18)
 
-  .header__logo
-    a(href='/')
-      span.bgimage(data-bg="/img/common/logo.svg") 
+.header-main
+  .container
+    .header
+      .header__mobile
+        .btn-burger
+          span
+          span
+          span
 
-  .header__mobile
-    .burger
-      i
-      i
-      i
+      .header__logo
+        a(href='/')
+          span.bgimage(style="background-image: url(/img/common/logo.svg)") 
 
-  .header__nav
-    nav
-      ul
-        each item in app.mainMenu
-          li: a(href=item.href)= item.text
+      .header__nav
+        nav
+          ul
+            each item in app.mainMenu
+              li: a(href=item.href)= item.text
 
-  .header__phones
-    .header__number: a(href='#')
-      +icons('#ic_phone', 24)
-      span  +7 495 799 34 99
-    .header__worktime: span Работаем с 9.00 до 19.00
+      .header__phones
+        .header__number: a(href='#')
+          a(href='#') (604) 227 - 9083
 
-  .header__msgr
-    ul
-      li.ic_wa: a(href='#'): +icons('#ic_wa')
-      li.ic_tg: a(href='#'): +icons('#ic_tg')
-
-  .header__fav
-    a(href='wish-list.html')
-      span(class="wrp-wishlist")
-        +icons('#ic_heart')
-        span(data-totalwishlist="" class="hide total-wishlist") 0
-
-  .header__find
-    a(href='#'): +icons('#ic_loupe')
+      .header__btn
+        button.btn Get free Quote
 
 
 

@@ -61,7 +61,7 @@
             font-size: rem(18);
         }
 
-        @media screen and (max-width: $w580) {
+        @media screen and (max-width: $w576) {
             font-size: 15px;
             line-height: 140%;
         }
@@ -81,7 +81,7 @@
         & svg {
             transition: 0.3s ease;
 
-            @media screen and (max-width: $w580) {
+            @media screen and (max-width: $w576) {
                 width: rem(15);
                 height: rem(15);
             }

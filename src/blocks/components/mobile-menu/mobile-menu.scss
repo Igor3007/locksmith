@@ -21,7 +21,7 @@
         padding: 50px;
     }
 
-    @media screen and (max-width: $w580) {
+    @media screen and (max-width: $w576) {
         padding: 30px;
     }
 
@@ -62,7 +62,7 @@
                 display: block;
                 padding-bottom: 8px;
 
-                @media screen and (max-width: $w580) {
+                @media screen and (max-width: $w576) {
                     font-size: 18px;
                     line-height: 157%;
                 }
@@ -79,7 +79,7 @@
         align-items: center;
         border-right: 2px solid #fff;
 
-        @media screen and (max-width: $w580) {
+        @media screen and (max-width: $w576) {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -102,7 +102,7 @@
         font-size: 14px;
         text-align: center;
 
-        @media screen and (max-width: $w580) {
+        @media screen and (max-width: $w576) {
             padding: 0 30px;
         }
 
@@ -169,7 +169,7 @@
     &__photo {
         margin-right: 20px;
 
-        @media screen and (max-width: $w580) {
+        @media screen and (max-width: $w576) {
             margin-right: 0px;
             margin-bottom: 15px;
         }
@@ -197,7 +197,7 @@
         color: #FFFFFF;
         padding-bottom: 10px;
 
-        @media screen and (max-width: $w580) {
+        @media screen and (max-width: $w576) {
             text-align: center;
             justify-content: center;
         }
@@ -216,7 +216,7 @@
         align-items: center;
         color: #FFFFFF;
 
-        @media screen and (max-width: $w580) {
+        @media screen and (max-width: $w576) {
             text-align: center;
             justify-content: center;
         }
@@ -252,7 +252,7 @@
         right: 40px;
     }
 
-    @media screen and (max-width: $w580) {
+    @media screen and (max-width: $w576) {
         right: 20px;
     }
 

@@ -122,7 +122,7 @@
         padding-top: rem($val2);
     }
 
-    @media screen and (max-width: $w940) {
+    @media screen and (max-width: $w992) {
         $val2: (940 * $px) / 1920;
         padding-top: if($val2 > 50, rem($val2), rem(50));
     }
@@ -146,7 +146,7 @@
         padding-bottom: rem($val2);
     }
 
-    @media screen and (max-width: $w940) {
+    @media screen and (max-width: $w992) {
         $val2: (940 * $px) / 1920;
         padding-bottom: if($val2 > 50, rem($val2), rem(50));
     }
@@ -170,7 +170,7 @@
         padding-left: rem($val2);
     }
 
-    @media screen and (max-width: $w940) {
+    @media screen and (max-width: $w992) {
         $val2: (940 * $px) / 1920;
         padding-left: if($val2 > 50, rem($val2), rem(50));
     }
@@ -194,7 +194,7 @@
         padding-right: rem($val2);
     }
 
-    @media screen and (max-width: $w940) {
+    @media screen and (max-width: $w992) {
         $val2: (940 * $px) / 1920;
         padding-right: if($val2 > 50, rem($val2), rem(50));
     }
@@ -222,7 +222,7 @@
         padding-top: rem($val2);
     }
 
-    @media screen and (max-width: $w940) {
+    @media screen and (max-width: $w992) {
         $val2: (940 * $px) / 1920;
 
         padding-bottom: if($val2 > 50, rem($val2), rem(50));
@@ -252,7 +252,7 @@
         padding-right: rem($val2);
     }
 
-    @media screen and (max-width: $w940) {
+    @media screen and (max-width: $w992) {
         $val2: (940 * $px) / 1920;
         padding-left: if($val2 > 50, rem($val2), rem(50));
         padding-right: if($val2 > 50, rem($val2), rem(50));
@@ -266,11 +266,11 @@
         font-size: 38px;
     }
 
-    @media screen and (max-width: $w940) {
+    @media screen and (max-width: $w992) {
         font-size: 36px;
     }
 
-    @media screen and (max-width: $w580) {
+    @media screen and (max-width: $w576) {
         font-size: 30px;
     }
 
@@ -286,7 +286,7 @@
         font-size: 20px;
     }
 
-    @media screen and (max-width: $w580) {
+    @media screen and (max-width: $w576) {
         font-size: 19px;
     }
 
@@ -302,7 +302,7 @@
 @mixin font-size-16 {
     font-size: 16px;
 
-    @media screen and (max-width: $w940) {
+    @media screen and (max-width: $w992) {
         font-size: 14px;
     }
 }

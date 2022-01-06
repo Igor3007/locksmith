@@ -35,7 +35,7 @@ const requireDir = require("require-dir"),
         },
         images: {
             src: [
-                "./src/img/**/*.{jpg,jpeg,png,gif}",
+                "./src/img/**/*.{jpg,jpeg,png,gif,svg}",
                 "!./src/img/favicon/*.{jpg,jpeg,png,gif,tiff}"
             ],
             dist: "./dist/img/",

@@ -54,7 +54,7 @@
             margin-left: -30px;
             margin-top: -30px;
 
-            @media screen and (max-width: $w580) {
+            @media screen and (max-width: $w576) {
 
                 width: 40px;
                 min-width: 40px;
@@ -135,7 +135,7 @@
 
             border-radius: 50%;
 
-            @media screen and (max-width: $w940) {
+            @media screen and (max-width: $w992) {
                 width: rem(70);
                 height: rem(70);
             }

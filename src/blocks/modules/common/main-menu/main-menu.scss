@@ -12,7 +12,7 @@
     padding: rem(80) rem(25);
     animation: slide-Y 0.3s ease forwards;
 
-    @media screen and (max-width: $w940) {
+    @media screen and (max-width: $w992) {
         padding: rem(40) rem(25);
     }
 
@@ -88,7 +88,7 @@
                 letter-spacing: 0.1em;
                 text-transform: uppercase;
 
-                @media screen and (max-width: $w580) {
+                @media screen and (max-width: $w576) {
                     font-size: 14px /*14*/;
 
                 }
@@ -143,7 +143,7 @@
                         transition: 0.4s ease;
                     }
 
-                    @media screen and (max-width: $w580) {
+                    @media screen and (max-width: $w576) {
                         width: rem(38);
                         min-width: rem(38);
                         height: rem(38);
@@ -155,7 +155,7 @@
                         height: rem(20);
 
 
-                        @media screen and (max-width: $w580) {
+                        @media screen and (max-width: $w576) {
                             width: rem(18);
                             min-width: rem(18);
                             height: rem(18);

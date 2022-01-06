@@ -1,3 +1,95 @@
-header {}
+header {
+    position: relative;
+}
 
-.header {}
+.header-top {
+    background-color: $red;
+
+
+    &__wrp {
+        color: #fff;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 42px;
+        font-size: 18px;
+
+        & span {
+            padding: 0 20px;
+        }
+    }
+}
+
+.header-main {
+    position: absolute;
+    z-index: 5;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.header {
+
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+
+    &__mobile {
+        padding-right: 25px;
+    }
+
+    &__logo {
+        & .bgimage {
+            padding-top: 30%;
+            width: 110px;
+            display: block;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__nav {
+
+        display: none;
+
+        @media screen and (min-width: $w1280) {
+            display: block;
+        }
+    }
+
+    &__phones {
+        display: none;
+    }
+
+    &__btn {
+        margin-left: auto;
+
+
+        & .btn {
+            height: 48px;
+            font-size: 14px;
+
+            @media screen and (min-width: $w576) {
+                height: 60px;
+                font-size: 18px;
+            }
+        }
+    }
+
+
+}
+
+.btn-burger {
+    & span {
+        background-color: #fff;
+        height: 2px;
+        width: 35px;
+        display: block;
+        margin: 11px 0;
+
+        &:last-child {
+            width: 18px;
+        }
+    }
+}

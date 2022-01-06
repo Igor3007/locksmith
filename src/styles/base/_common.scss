@@ -2,7 +2,7 @@
 
     padding-top: rem(75);
 
-    @media screen and (max-width: $w580) {
+    @media screen and (max-width: $w576) {
         padding-top: rem(35);
 
     }
@@ -10,7 +10,7 @@
     &--card {
         padding-top: rem(35);
 
-        @media screen and (max-width: $w580) {
+        @media screen and (max-width: $w576) {
             padding-top: rem(35);
 
         }
@@ -20,7 +20,7 @@
 
         padding-bottom: rem(25);
 
-        @media screen and (max-width: $w580) {
+        @media screen and (max-width: $w576) {
             padding-bottom: rem(20);
 
         }
@@ -33,7 +33,7 @@
     &__breadcrumb {
         padding-bottom: rem(25);
 
-        @media screen and (max-width: $w580) {
+        @media screen and (max-width: $w576) {
             padding-bottom: rem(15);
 
         }

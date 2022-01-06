@@ -1,12 +1,30 @@
 extends layouts/index
 
+include ../blocks/modules/first-block/first-block.pug
+include ../blocks/modules/our-services/our-services.pug
+include ../blocks/modules/advantages-block/advantages-block.pug
+include ../blocks/modules/video-block/video-block.pug
+include ../blocks/modules/our-clients/our-clients.pug
+include ../blocks/modules/areas-block/areas-block.pug
+include ../blocks/modules/our-rewiew/our-rewiew.pug
+include ../blocks/modules/our-blog/our-blog.pug
+include ../blocks/modules/contact-block/contact-block.pug
+
 block variables
   include ../data/data.pug
 
 
 block content
 
-  div new project
+  +first-block()
+  +our-services()
+  +advantages-block()
+  +video-block()
+  +areas-block()
+  +our-clients()
+  +our-rewiew()
+  +our-blog()
+  +contact-block()
 
 
 block scripts

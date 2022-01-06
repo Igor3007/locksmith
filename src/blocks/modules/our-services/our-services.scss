@@ -1,0 +1,20 @@
+.section-our-services {
+    @include section-padding;
+}
+
+.our-services {
+    &__title {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 117.2%;
+        color: #1B1A1C;
+        padding-bottom: 20px;
+    }
+}
+
+.card-service {
+    margin-bottom: 25px;
+    background: #F5F5F5;
+    border-radius: 10px;
+    padding: 15px;
+}

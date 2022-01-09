@@ -1,4 +1,48 @@
+include ../../components/video/video.pug
+
 mixin our-rewiew
   section.section-our-rewiew
-    .container our-rewiew
+    .container
+      .our-rewiew
+        .our-rewiew__label: span Reviews
+        .our-rewiew__title Our Reviews
+        .our-rewiew__slider
+          .swiper-container(data-swiper="review")
+            .swiper-wrapper
+              each item in app.review
+                .swiper-slide
+                  if(item.type == "text")
+                    +card-review(item)
+                  if(item.type == "video")
+                    +card-review-video(item)
+          .swiper-nav
+            .swiper-nav__prev(data-swiper-prev="review"): +icons('#ic_swiper-prev', 35)
+            .swiper-nav__counter Review <span class="review-counter-current">1</span> of <span class="review-counter-total">4</span>
+            .swiper-nav__next(data-swiper-next="review"): +icons('#ic_swiper-next', 35)
 
+mixin card-review(data)
+  .card-review
+    .card-review__head
+      .card-review__photo
+        +picture(data.image)
+      .card-review__userdata
+        .card-review__name= data.name
+        .card-review__stars: span.review-stars(style="background-image: url('/img/svg/ic_rating.svg')")
+    .card-review__main
+      .card-review__text
+        span= data.text
+
+mixin card-review-video(data)
+  .card-review
+    .card-review__head
+      .card-review__photo
+        +picture(data.image)
+      .card-review__userdata
+        .card-review__name= data.name
+        .card-review__stars: span.review-stars(style="background-image: url('/img/svg/ic_rating.svg')")
+    .card-review__main
+      .card-review__video
+        +video-review({
+          link: 'https://www.youtube.com/watch?v=7_-iNufEXsM',
+          preview: '/img/common/preview-video-review'
+        })

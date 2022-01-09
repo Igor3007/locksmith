@@ -13,7 +13,6 @@ input {
     & input[type="email"],
     & input[type="tel"] {
         height: 61px;
-        border: 1px solid $main;
         font-size: 18px;
         padding-left: rem(35);
         padding-right: rem(35);
@@ -23,6 +22,8 @@ input {
 
 
     }
+
+
 
     & select {
         padding-right: 25px;
@@ -91,12 +92,15 @@ input {
     }
 
     & textarea {
-        min-height: rem(40);
+        min-height: 120px;
         max-width: 100%;
         resize: vertical;
         width: 100%;
-        border: 1px solid $main;
-        padding: rem(15) rem(25);
+        border: 1px solid #E1E1E1;
+        border-radius: 10px;
+        font-size: 18px;
+
+        padding: rem(15) rem(35);
 
         &:focus {
             outline: none !important;
@@ -108,9 +112,10 @@ input {
 
         display: flex;
         align-items: center;
+        flex-direction: column;
 
-        @media screen and (max-width: $w480) {
-            flex-direction: column;
+        @media screen and (min-width: $w576) {
+            flex-direction: row;
         }
 
 
@@ -129,9 +134,13 @@ input {
 
     &__subitem {
         flex-grow: 1;
-        margin-bottom: rem(10);
-        margin-right: rem(10);
+        margin-bottom: 10px;
+        margin-right: 0;
         width: 100%;
+
+        @media screen and (min-width: $w576) {
+            margin-right: 10px;
+        }
 
         &.form__subitem--auto {
             width: auto;
@@ -153,9 +162,7 @@ input {
             width: 100%;
         }
 
-        @media screen and (max-width: $w480) {
-            margin-right: 0;
-        }
+
     }
 
     & fieldset {
@@ -163,9 +170,6 @@ input {
         padding: 0;
         margin-top: rem(40);
 
-        @media screen and (max-width: $w760) {
-            margin-top: rem(30);
-        }
 
         &:first-child {
             margin-top: rem(0);
@@ -175,9 +179,7 @@ input {
     & legend {
         margin-bottom: rem(30);
 
-        @media screen and (max-width: $w760) {
-            margin-bottom: rem(20);
-        }
+
     }
 
 
@@ -255,344 +257,6 @@ input {
         }
 
 
-    }
-
-    /* 
-    ========================================================
-    material input text
-    ========================================================
-    */
-    & .input-material {
-        position: relative;
-        width: 100%;
-        margin-bottom: rem(20);
-        margin-top: rem(30);
-
-        @media screen and (max-width: $w576) {
-            margin-bottom: rem(20);
-            margin-top: rem(25);
-        }
-
-        & input {
-            font-size: rem(15);
-            padding: rem(10) 0;
-            display: block;
-            width: 100%;
-            border: none;
-            border-bottom: 2px solid $gray;
-            background: transparent;
-            color: #000;
-            font-weight: 500;
-
-            &:invalid {
-                box-shadow: none !important;
-            }
-        }
-
-        & textarea {
-            font-size: rem(15);
-            padding: rem(10) 0;
-            display: block;
-            width: 100%;
-            border: none;
-            border-bottom: 2px solid $gray;
-            background: transparent;
-            color: #000;
-            font-weight: 500;
-
-            &:invalid {
-                box-shadow: none !important;
-            }
-        }
-
-        & input:focus {
-            outline: none;
-        }
-
-        & label {
-            color: #000;
-            font-size: rem(15);
-            position: absolute;
-            pointer-events: none;
-            left: 0;
-            font-weight: bol;
-            top: 11px;
-            transition: 0.2s ease all;
-            -moz-transition: 0.2s ease all;
-            -webkit-transition: 0.2s ease all;
-        }
-
-        & .tooltip {
-            position: absolute;
-            right: 0;
-            top: 11px;
-            font-size: rem(13);
-            color: #6A6A6A;
-
-            @media screen and (max-width: $w576) {
-                font-size: 0;
-
-                &::before {
-                    content: '*';
-                    font-size: 20px;
-                    color: $red;
-                }
-            }
-        }
-
-        /* active state */
-        & input:focus~label,
-        & input[area-valid]~label,
-        & textarea:focus~label,
-        & textarea[area-valid=true]~label,
-        & textarea[area-valid=false]~label {
-            top: -15px;
-            font-size: rem(13);
-            color: $gray;
-        }
-
-        & textarea[area-valid=false]~.bar,
-        & input[area-valid=false]~.bar {
-
-            &::before,
-            &::after {
-                background: $red;
-                width: 50%;
-            }
-        }
-
-        & textarea[area-valid=false]~.tooltip,
-        & input[area-valid=false]~.tooltip {
-
-            color: $red;
-        }
-
-        & textarea:focus[area-valid=false]~.bar,
-        & input:focus[area-valid=false]~.bar {
-
-            &::before,
-            &::after {
-                background: $grayBlue;
-                width: 50%;
-            }
-        }
-
-        & textarea:focus~.tooltip,
-        & input:focus~.tooltip {
-            display: none;
-        }
-
-        & textarea[area-valid=true]~.tooltip,
-        & input[area-valid=true]~.tooltip {
-            width: 13px;
-            height: 13px;
-            display: block;
-            background-image: url(/img/svg/ic_checked-green.svg);
-            font-size: 0;
-            background-repeat: no-repeat;
-            background-position: center;
-
-            &::before {
-                display: none;
-            }
-        }
-
-        /* BOTTOM BARS ================================= */
-        & .bar {
-            position: relative;
-            display: block;
-        }
-
-        & .bar:before,
-        & .bar:after {
-            content: '';
-            height: 2px;
-            width: 0;
-            bottom: 0;
-            position: absolute;
-            background: $grayBlue;
-            transition: 0.2s ease all;
-            -moz-transition: 0.2s ease all;
-            -webkit-transition: 0.2s ease all;
-        }
-
-        & .bar:before {
-            left: 50%;
-        }
-
-        & .bar:after {
-            right: 50%;
-        }
-
-        /* active state */
-        & textarea:focus~.bar:before,
-        & input:focus~.bar:before,
-        & textarea:focus~.bar:after,
-        & input:focus~.bar:after {
-            width: 50%;
-        }
-
-    }
-
-    & .input-primary {
-        border: 1px solid $mgray;
-        width: 100%;
-        border-radius: rem(50);
-        display: flex;
-        align-items: center;
-        background-color: #fff;
-
-        & input {
-            border: none;
-            width: 100%;
-            display: block;
-            height: rem(48);
-            background-color: transparent;
-            padding: 0 rem(25);
-        }
-
-        & .tooltip-showpass,
-        & .tooltip {
-            min-width: rem(20);
-            width: rem(20);
-            height: rem(20);
-            display: inline-block;
-            margin-right: rem(15);
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            opacity: 0;
-
-            @media screen and (max-width: $w576) {
-                min-width: rem(17);
-                width: rem(40);
-                height: rem(40);
-
-                background-size: 17px auto;
-                background-position: center right;
-
-            }
-        }
-
-        & textarea[area-valid=true]~.tooltip,
-        & input[area-valid=true]~.tooltip {
-            background-image: url(/img/svg/ic_input-valid.svg);
-            font-size: 0;
-            opacity: 1;
-            background-size: contain;
-
-            &::before {
-                display: none;
-            }
-        }
-
-        & .tooltip-showpass {
-            opacity: 1;
-            background-image: url(/img/svg/ic_eye.svg);
-            cursor: pointer;
-        }
-
-        & textarea[area-valid=false]~.tooltip,
-        & input[area-valid=false]~.tooltip {
-            background-image: url(/img/svg/ic_input-invalid.svg);
-            font-size: 0;
-            opacity: 1;
-            background-size: contain;
-
-
-            &::before {
-                display: none;
-            }
-        }
-
-        &.input-icon svg {
-            margin-left: rem(15);
-            min-width: rem(16);
-            width: rem(16);
-        }
-
-        &.input-icon input {
-            padding-left: rem(15);
-            width: calc(100% - 30px);
-        }
-    }
-
-
-
-}
-
-.upload-files {
-
-    & li {
-        list-style-type: none;
-        font-size: rem(13);
-        padding-top: 15px;
-        display: flex;
-        line-height: 25px;
-
-
-        &::before {
-            width: 25px;
-            height: 25px;
-            background: #212121;
-            content: '';
-            display: block;
-            margin-right: 10px;
-            border-radius: 50%;
-
-            background-image: url(/img/svg/ic_checked-green.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-    }
-}
-
-.input-attach {
-    width: 100%;
-
-    & span.file-btn {
-        border: 1px solid #d8d8d8;
-        font-weight: 500;
-        font-size: rem(13);
-        line-height: rem(14);
-        text-transform: uppercase;
-        color: #818181;
-        border-radius: rem(50);
-        margin-left: auto;
-        display: inline-block;
-        padding: rem(7) rem(17);
-        cursor: pointer;
-        text-align: center;
-
-        &:hover {
-            border: 1px solid $red;
-            background: $red;
-            color: #fff;
-        }
-    }
-
-    & span.file-name {
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        font-size: 12px;
-        line-height: rem(30);
-        padding-left: rem(15);
-        color: $gray;
-    }
-
-    & label {
-        border: 1px solid #d8d8d8;
-        width: 100%;
-        border-radius: rem(50);
-        display: block;
-        text-align: right;
-        padding: rem(4);
-        display: flex;
-    }
-
-    & input {
-        display: none
     }
 
 }

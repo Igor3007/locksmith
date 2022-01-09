@@ -8,13 +8,91 @@
         font-size: 36px;
         line-height: 117.2%;
         color: #1B1A1C;
-        padding-bottom: 20px;
+        padding-bottom: 55px;
+    }
+
+    &__label {
+
+        display: none;
+
+        @media screen and (min-width: $w760) {
+            padding-bottom: 15px;
+            display: block;
+
+            & span {
+                padding: 7px 16px;
+                background: #BF3232;
+                border-radius: 10px;
+                font-size: 14px;
+                color: #fff;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &__list {
+        @include row-flex;
+    }
+
+    &__item {
+        @include col();
+        @include size(12);
+        @include size-w768(6);
+        @include size-w992(4);
+
+    }
+
+    &__item {
+        margin-bottom: 40px;
     }
 }
 
 .card-service {
-    margin-bottom: 25px;
+
     background: #F5F5F5;
     border-radius: 10px;
-    padding: 15px;
+    padding: 35px;
+    height: 100%;
+
+    &__icon {
+        padding-bottom: 25px;
+    }
+
+    &__title {
+        font-size: 28px;
+        font-weight: bold;
+        padding-bottom: 25px;
+        line-height: 120%;
+    }
+
+    &__desc {
+        padding-bottom: 25px;
+        font-size: 18px;
+        line-height: 23px;
+        color: #838383;
+
+        & span {
+            @include line-clamp(5);
+        }
+    }
+
+    &__link {
+        & a {
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            & svg {
+                margin-right: 15px;
+            }
+
+            & span {
+                font-weight: 600;
+                font-size: 18px;
+            }
+        }
+    }
 }

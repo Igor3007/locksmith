@@ -29,3 +29,29 @@ gulp.task("scripts", () => {
         }))
         .on("end", browsersync.reload);
 });
+
+gulp.task("libs", () => {
+    return gulp.src(paths.libs.src)
+        // .pipe(webpackStream(webpackConfig), webpack)
+        // .pipe(gulpif(production, rename({
+        //     suffix: ".min"
+        // })))
+        .pipe(gulp.dest(paths.libs.dist))
+        .pipe(debug({
+            "title": "libs"
+        }))
+        .on("end", browsersync.reload);
+});
+
+gulp.task("pagejs", () => {
+    return gulp.src(paths.pagejs.src)
+        // .pipe(webpackStream(webpackConfig), webpack)
+        // .pipe(gulpif(production, rename({
+        //     suffix: ".min"
+        // })))
+        .pipe(gulp.dest(paths.pagejs.dist))
+        .pipe(debug({
+            "title": "pagejs"
+        }))
+        .on("end", browsersync.reload);
+});

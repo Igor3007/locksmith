@@ -2,13 +2,11 @@
     margin: 0 auto;
     position: relative;
     background: #000;
-    border-radius: 5px;
+    border-radius: 10px;
     overflow: hidden;
     margin-top: rem(20);
 
-    @media screen and (max-width: $w480) {
-        border-radius: 0;
-    }
+
 
     &:hover {
         & svg {
@@ -38,9 +36,9 @@
 
         &::before {
             content: '';
-            width: 60px;
-            min-width: 60px;
-            height: 60px;
+            width: 36px;
+            min-width: 36px;
+            height: 36px;
             border: 5px solid $red;
             display: block;
             border-radius: 50%;
@@ -51,18 +49,15 @@
             z-index: 2;
             left: 50%;
             top: 50%;
-            margin-left: -30px;
-            margin-top: -30px;
+            margin-left: -18px;
+            margin-top: -18px;
 
-            @media screen and (max-width: $w576) {
-
-                width: 40px;
-                min-width: 40px;
-                height: 40px;
-                border: 4px solid $red;
-                border-left: 4px solid transparent;
-                margin-left: -20px;
-                margin-top: -20px;
+            @media screen and (min-width: $w576) {
+                width: 60px;
+                min-width: 60px;
+                height: 60px;
+                margin-left: -30px;
+                margin-top: -30px;
             }
 
         }
@@ -74,11 +69,22 @@
     }
 
     &__preview {
-        & span {
-            padding-top: 56%;
-            background-size: cover;
+        & picture {
+            padding-top: 61%;
             display: block;
-            background-position: center;
+            position: relative;
+
+            & img {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+
         }
     }
 
@@ -88,7 +94,7 @@
         right: 0;
         top: 0;
         bottom: 0;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.82);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -96,18 +102,23 @@
         transition: 0.3s ease;
 
         &:hover {
-            background-color: rgba(0, 0, 0, 0.2);
+            background-color: rgba(0, 0, 0, 0.62);
         }
     }
 
     &__title {
-        @include font-size-22();
-        font-size: rem(30);
+
+        font-size: 22px;
+        font-weight: bold;
         text-align: center;
         color: #FFFFFF;
         max-width: rem(400);
         margin: 0 auto;
         line-height: 140%;
+
+        @media screen and (min-width: $w760) {
+            font-size: 28px;
+        }
 
 
     }
@@ -122,28 +133,30 @@
 
         & span {
             color: #FFFFFF;
-            @include font-size-16();
+            font-size: 16px;
             text-decoration: underline;
         }
 
         & svg {
             margin: rem(20) 0;
-            fill: #fe3e77;
-            width: rem(77);
-            height: rem(77);
-
-
+            width: rem(48);
+            height: rem(48);
             border-radius: 50%;
 
-            @media screen and (max-width: $w992) {
-                width: rem(70);
-                height: rem(70);
+            @media screen and (min-width: $w760) {
+                width: rem(86);
+                height: rem(86);
             }
 
-            @media screen and (max-width: $w480) {
-                width: rem(60);
-                height: rem(60);
-            }
+            // @media screen and (max-width: $w992) {
+            //     width: rem(70);
+            //     height: rem(70);
+            // }
+
+            // @media screen and (max-width: $w480) {
+            //     width: rem(60);
+            //     height: rem(60);
+            // }
 
         }
     }

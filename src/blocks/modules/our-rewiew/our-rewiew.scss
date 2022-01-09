@@ -1,0 +1,167 @@
+.section-our-rewiew {
+    @include section-padding;
+}
+
+.our-rewiew {
+
+
+
+    &__label {
+
+        display: none;
+
+        @media screen and (min-width: $w760) {
+            padding-bottom: 15px;
+            display: block;
+
+            & span {
+                padding: 7px 16px;
+                background: #BF3232;
+                border-radius: 10px;
+                font-size: 14px;
+                color: #fff;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &__title {
+        @include section-title;
+        padding-bottom: 35px;
+    }
+
+    &__slider {
+        position: relative;
+    }
+}
+
+.card-review {
+
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    padding: 30px;
+
+    &__head {
+        display: flex;
+        align-items: center;
+        padding-bottom: 25px;
+    }
+
+    &__photo {
+        max-width: 74px;
+        width: 100%;
+
+        & picture {
+            display: block;
+            padding-top: 100%;
+            position: relative;
+            border-radius: 50%;
+            overflow: hidden;
+
+            & img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__userdata {
+        padding-left: 20px;
+
+    }
+
+    &__name {
+        font-size: 18px;
+        font-weight: bold;
+        padding-bottom: 5px;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 120%;
+        color: #838383;
+        min-height: 225px;
+
+        &>span {
+            line-clamp: 10;
+        }
+    }
+
+    & .review-stars {
+        width: 92px;
+        height: 13px;
+        display: inline-block;
+        background-size: contain;
+        background-position: left center;
+        background-repeat: no-repeat;
+
+
+    }
+
+    &__video {
+
+        min-height: 225px;
+
+        & .video {
+            margin-top: 0;
+        }
+
+        & .video__button svg {
+            width: 45px;
+            height: 45px;
+        }
+
+        & .video.play::before {
+            width: 36px;
+            min-width: 36px;
+            height: 36px;
+            margin-left: -18px;
+            margin-top: -18px;
+        }
+    }
+}
+
+.swiper-nav {
+    display: flex;
+    align-items: center;
+    padding-top: 24px;
+
+    @media screen and (min-width: $w1440) {
+        left: -80px;
+        right: -80px;
+    }
+
+    @media screen and (min-width: $w760) {
+        position: absolute;
+        left: -50px;
+        right: -50px;
+        top: 50%;
+        z-index: 2;
+        margin-top: -17px;
+        justify-content: space-between;
+        height: 0px;
+    }
+
+    &__counter {
+        flex-grow: 1;
+        text-align: center;
+        font-size: 18px;
+
+        @media screen and (min-width: $w760) {
+            display: none;
+        }
+    }
+
+    &__next,
+    &__prev {
+        cursor: pointer;
+
+        &.swiper-button-disabled {
+            opacity: 0.3;
+        }
+    }
+}

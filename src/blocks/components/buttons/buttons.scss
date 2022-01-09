@@ -25,7 +25,7 @@
 
 
     &:hover {
-        opacity: 0.9;
+        background-color: #ED3939;
     }
 
     &:active,
@@ -68,6 +68,7 @@
         background-color: #1B1A1C;
 
         &:hover {
+            background-color: #1B1A1C;
             opacity: 0.9;
         }
     }

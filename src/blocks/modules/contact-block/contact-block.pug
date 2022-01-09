@@ -1,4 +1,30 @@
 
 mixin contact-block
   section.section-contact-block
-    .container contact-block
+
+    .contact-block
+      .contact-block__bg
+
+        +pictureResp({
+          w1200: '/img/common/contact-bg',
+          w760: '/img/common/contact-bg_760',
+          w480: '/img/common/contact-bg_480',
+          def: '/img/common/contact-bg_480',
+        })
+      .contact-block__content
+        .container
+          .contact-block__wrp
+            .contact-block__title Get In touch
+            .contact-block__desc Have a question or enquiry? Drop us an email or message us on our social channels and we’ll get back to you as soon as possible.
+            .contact-block__form
+              form(action='#' method='POST')
+                .form
+                  .form__item
+                    .form__subitem: input(type="text" placeholder="Name*")
+                    .form__subitem: input(type="tel" placeholder="Telephone*")
+                  .form__item
+                    .form__subitem
+                      textarea(placeholder="How can we hep you?")
+                  .form__item
+                    .form__subitem
+                      button.btn.btn-black Send Message

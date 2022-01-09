@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="header-main">
-        <div class="container">
+        <div class="container container--large">
           <div class="header">
             <div class="header__mobile">
               <div class="btn-burger"><span></span><span></span><span></span></div>
@@ -47,14 +47,66 @@
             <div class="header__logo"><a href="/"><span class="bgimage" style="background-image: url(/img/common/logo.svg)"> </span></a></div>
             <div class="header__nav">
               <nav>
-                <ul>
-                  <li><a href="catalog.html">Каталог недвижимости</a></li>
-                  <li><a href="shop.html">Купить</a></li>
-                  <li><a href="rent.html">Арендовать</a></li>
-                  <li><a href="#">Сoбственникам</a></li>
-                  <li><a href="about.html">О компании</a></li>
+                <ul class="nav-menu">
+                  <li><a href="services.html"><span>Our Services</span><span class="arrow-menu"></span></a>
+                    <ul class="sub-menu">
+                      <li><a href="#"><span>Emergency Locksmith</span></a>
+                      </li>
+                      <li><a href="#"><span>Residental Locksmith</span></a>
+                      </li>
+                      <li><a href="#"><span>Mobile Locksmith</span><span class="arrow-menu"></span></a>
+                        <ul class="sub-menu">
+                          <li><a href="#">Mobile Locksmith Abbotsford</a></li>
+                          <li><a href="#">Mobile Locksmith Aldergrove</a></li>
+                          <li><a href="#">Mobile Locksmith Annacis Island</a></li>
+                          <li><a href="#">Mobile Locksmith Burnaby</a></li>
+                          <li><a href="#">Mobile Locksmith Coquitlam</a></li>
+                          <li><a href="#">Mobile Locksmith Delta</a></li>
+                          <li><a href="#">Mobile Locksmith Downtown Vancouver</a></li>
+                          <li><a href="#">Mobile Locksmith East Vancouver</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#"><span>Comercial Locksmith</span></a>
+                      </li>
+                      <li><a href="#"><span>services 5</span></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="location.html"><span>Location</span><span class="arrow-menu"></span></a>
+                    <ul class="sub-menu">
+                      <li><a href="#"><span>Locksmith Vancouver</span><span class="arrow-menu"></span></a>
+                        <ul class="sub-menu">
+                          <li><a href="#">Locksmith Downtown Vancouver</a></li>
+                          <li><a href="#">Locksmith Point Grey</a></li>
+                          <li><a href="#">Locksmith Yaletown</a></li>
+                          <li><a href="#">Locksmith East Vancouver</a></li>
+                          <li><a href="#">Locksmith UBC</a></li>
+                          <li><a href="#">Locksmith Marpole</a></li>
+                          <li><a href="#">Locksmith Kitsilano</a></li>
+                          <li><a href="#">Locksmith Point Grey</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#"><span>Locksmith Burnaby</span></a>
+                      </li>
+                      <li><a href="#"><span>Locksmith Abbotsford</span></a>
+                      </li>
+                      <li><a href="#"><span>Locksmith Coquitlam</span></a>
+                      </li>
+                      <li><a href="#"><span>Locksmith Surrey</span></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="clients.html"><span>Clients</span></a>
+                  </li>
+                  <li><a href="project.html"><span>Precent Project</span></a>
+                  </li>
+                  <li><a href="contact.html"><span>Contact</span></a>
+                  </li>
                 </ul>
-              </nav>
+              </nav><span class="close-menu" data-menu="close">
+                <svg width="40" height="40">
+                  <use xlink:href="/img/sprites/sprite.svg#ic_cross"></use>
+                </svg></span>
             </div>
             <div class="header__phones">
               <div class="header__number"><a href="#"><a href="#">(604) 227 - 9083</a></a></div>
@@ -72,11 +124,11 @@
           <div class="first-block__bg">
             <picture>
               <source srcset="/img/common/first-block-bg.webp" type="image/webp" media="(min-width: 1200px)"/>
-              <source srcset="/img/crop/w1200/common/first-block-bg.webp" type="image/webp" media="(min-width: 767px)"/>
-              <source srcset="/img/crop/w760/common/first-block-bg.webp" type="image/webp" media="(min-width: 480px)"/>
-              <source srcset="/img/common/first-block-bg.jpg" media="(min-width: 1200px)"/>
-              <source srcset="/img/crop/w1200/common/first-block-bg.jpg" media="(min-width: 767px)"/>
-              <source srcset="/img/crop/w760/common/first-block-bg.jpg" media="(min-width: 480px)"/><img src="/img/crop/w480/common/first-block-bg.jpg " loading="lazy" alt="Background"/>
+              <source srcset="/img/common/first-block-bg.jpg" type="image/jpg" media="(min-width: 1200px)"/>
+              <source srcset="/img/common/first-block-bg_760.webp" type="image/webp" media="(min-width: 767px)"/>
+              <source srcset="/img/common/first-block-bg_760.jpg" type="image/jpg" media="(min-width: 767px)"/>
+              <source srcset="/img/common/first-block-bg_480.webp" type="image/webp" media="(min-width: 480px)"/>
+              <source srcset="/img/common/first-block-bg_480.jpg" type="image/jpg" media="(min-width: 480px)"/><img src="/img/common/first-block-bg_480.jpg" loading="lazy" alt="Background"/>
             </picture>
           </div>
           <div class="first-block__content">
@@ -120,9 +172,7 @@
                             <div class="form__subitem">
                               <input type="text" placeholder="Name*"/>
                             </div>
-                          </div>
-                          <div class="form__item form__item--phone">
-                            <div class="form__subitem">
+                            <div class="form__subitem form__subitem--phone">
                               <input type="text" placeholder="Telephone*"/>
                             </div>
                           </div>
@@ -135,9 +185,7 @@
                                 <option value="3">Service 3</option>
                               </select>
                             </div>
-                          </div>
-                          <div class="form__item form__item--btn">
-                            <div class="form__subitem">
+                            <div class="form__subitem form__subitem--btn">
                               <button class="btn btn-black btn-full">Request service</button>
                             </div>
                           </div>
@@ -154,6 +202,7 @@
       <section class="section-our-services">
         <div class="container">
           <div class="our-services">
+            <div class="our-services__label"><span>Fast locksmith</span></div>
             <div class="our-services__title">Our Services</div>
             <div class="our-services__list">
               <div class="our-services__item">
@@ -162,9 +211,9 @@
                     <picture><img src="/img/common/sv1.svg" alt="service"/></picture>
                   </div>
                   <div class="card-service__title">Emergency Locksmith</div>
-                  <div class="card-service__desc">Emergency Locksmith 24 Hour Emergency Locksmith Even the most careful person can still get locked out of their home, off...</div>
+                  <div class="card-service__desc"><span>Emergency Locksmith 24 Hour Emergency Locksmith Even the most careful person can still get locked out of their home, off...</span></div>
                   <div class="card-service__link"><a href="#">
-                      <svg width="25" height="25">
+                      <svg width="38" height="38">
                         <use xlink:href="/img/sprites/sprite.svg#ic_link-arrow"></use>
                       </svg><span>Learn more</span></a></div>
                 </div>
@@ -175,9 +224,9 @@
                     <picture><img src="/img/common/sv2.svg" alt="service"/></picture>
                   </div>
                   <div class="card-service__title">Mobile Locksmith</div>
-                  <div class="card-service__desc">Emergency Locksmith 24 Hour Emergency Locksmith Even the most careful person can still get locked out of their home, off...</div>
+                  <div class="card-service__desc"><span>Emergency Locksmith 24 Hour Emergency Locksmith Even the most careful person can still get locked out of their home, off...</span></div>
                   <div class="card-service__link"><a href="#">
-                      <svg width="25" height="25">
+                      <svg width="38" height="38">
                         <use xlink:href="/img/sprites/sprite.svg#ic_link-arrow"></use>
                       </svg><span>Learn more</span></a></div>
                 </div>
@@ -188,9 +237,9 @@
                     <picture><img src="/img/common/sv3.svg" alt="service"/></picture>
                   </div>
                   <div class="card-service__title">Residental Locksmith</div>
-                  <div class="card-service__desc">Emergency Locksmith 24 Hour Emergency Locksmith Even the most careful person can still get locked out of their home, off...</div>
+                  <div class="card-service__desc"><span>Emergency Locksmith 24 Hour Emergency Locksmith Even the most careful person can still get locked out of their home, off...</span></div>
                   <div class="card-service__link"><a href="#">
-                      <svg width="25" height="25">
+                      <svg width="38" height="38">
                         <use xlink:href="/img/sprites/sprite.svg#ic_link-arrow"></use>
                       </svg><span>Learn more</span></a></div>
                 </div>
@@ -201,9 +250,9 @@
                     <picture><img src="/img/common/sv4.svg" alt="service"/></picture>
                   </div>
                   <div class="card-service__title">Automotive Locksmith</div>
-                  <div class="card-service__desc">Emergency Locksmith 24 Hour Emergency Locksmith Even the most careful person can still get locked out of their home, off...</div>
+                  <div class="card-service__desc"><span>Emergency Locksmith 24 Hour Emergency Locksmith Even the most careful person can still get locked out of their home, off...</span></div>
                   <div class="card-service__link"><a href="#">
-                      <svg width="25" height="25">
+                      <svg width="38" height="38">
                         <use xlink:href="/img/sprites/sprite.svg#ic_link-arrow"></use>
                       </svg><span>Learn more</span></a></div>
                 </div>
@@ -214,9 +263,9 @@
                     <picture><img src="/img/common/sv5.svg" alt="service"/></picture>
                   </div>
                   <div class="card-service__title">Door Repair Vancouver</div>
-                  <div class="card-service__desc">Emergency Locksmith 24 Hour Emergency Locksmith Even the most careful person can still get locked out of their home, off...</div>
+                  <div class="card-service__desc"><span>Emergency Locksmith 24 Hour Emergency Locksmith Even the most careful person can still get locked out of their home, off...</span></div>
                   <div class="card-service__link"><a href="#">
-                      <svg width="25" height="25">
+                      <svg width="38" height="38">
                         <use xlink:href="/img/sprites/sprite.svg#ic_link-arrow"></use>
                       </svg><span>Learn more</span></a></div>
                 </div>
@@ -226,10 +275,13 @@
         </div>
       </section>
       <section class="section-advantages-block">
-        <div class="container">
-          <div class="advantages-block">
+        <div class="advantages-block">
+          <div class="container">
+            <div class="advantages-block__label"><span>24 Hour Emergency</span></div>
             <div class="advantages-block__title">Locksmith Vancouver</div>
             <div class="advantages-block__text">For a locksmith in Vancouver who specializes in emergency locksmith services get in touch with Fast Locksmith 24/7 today. Our guaranteed 20 minute response time, as well as our assurance that we will always beat our competitors' prices is what we have built our reputation on. All of our services are available 24/7, so for a locksmith who you can trust to help you in an emergency situation give us a quick call now.</div>
+          </div>
+          <div class="container container--large">
             <div class="advantages-block__wrp">
               <div class="advantages-block__items">
                 <div class="advantages-item">
@@ -271,43 +323,46 @@
               </div>
               <div class="advantages-block__img">
                 <picture>
-                  <source srcset="/img/common/advantages-img.webp" type="image/webp" media="(min-width: 1200px)"/>
-                  <source srcset="/img/crop/w1200/common/advantages-img.webp" type="image/webp" media="(min-width: 767px)"/>
-                  <source srcset="/img/crop/w760/common/advantages-img.webp" type="image/webp" media="(min-width: 480px)"/>
-                  <source srcset="/img/common/advantages-img.jpg" media="(min-width: 1200px)"/>
-                  <source srcset="/img/crop/w1200/common/advantages-img.jpg" media="(min-width: 767px)"/>
-                  <source srcset="/img/crop/w760/common/advantages-img.jpg" media="(min-width: 480px)"/><img src="/img/crop/w480/common/advantages-img.jpg " loading="lazy" alt="Background"/>
+                  <source srcset="/img/common/advantages-img.webp" type="image/webp"/><img src="/img/common/advantages-img.jpg" loading="lazy" alt="image"/>
                 </picture>
               </div>
             </div>
+          </div>
+          <div class="container">
+            <div class="advantages-block__text">For a locksmith in Vancouver who specializes in emergency locksmith services get in touch with Fast Locksmith 24/7 today. Our guaranteed 20 minute response time, as well as our assurance that we will always beat our competitors' prices is what we have built our reputation on. All of our services are available 24/7, so for a locksmith who you can trust to help you in an emergency situation give us a quick call now.</div>
             <div class="advantages-block__subtitle">Locksmith in Vancouver for Every Type of Locksmith Service</div>
             <div class="advantages-block__text">Fast Locksmith Vancouver 24/7 does it all and we are experts in all locksmith services 2019. If you broke your key in the lock we can fix it instantly, if you need to rekey your lock for security purposes we can assist you immediately. We often face situations where a business is broken in to and our customers know that when they call Fast Locksmith they will get an immediate response 24/7. Of course, If you are locked out of your home, business, or car we are available to help 24/7 and will solve these issues for you without delay. Need to change your locks? Fast Locksmith has a wide range of locks available from all the well known brands including 6 pin medium security to high-security locks. We will help you decide which is best for your home, car, or business. At Fast Locksmith your safety is always our top priority.</div>
+            <div class="advantages-block__bg"><img src="/img/common/Subtract.svg" alt="bg" loading="lazy"/></div>
             <div class="advantages-block__more"><a href="#">
-                <svg width="25" height="25">
+                <svg width="38" height="38">
                   <use xlink:href="/img/sprites/sprite.svg#ic_link-arrow"></use>
                 </svg><span>Learn more</span></a></div>
           </div>
         </div>
       </section>
       <section class="section-video-block">
-        <div class="container">
+        <div class="container container--large">
           <div class="video-block">
             <div class="video-block__player">
-              <div class="video" data-id="function link() { [native code] }">
-                <div class="video__preview"><span class="bgimage lazyload" data-bg="undefined"></span>
+              <div class="video" data-id="https://www.youtube.com/watch?v=7_-iNufEXsM">
+                <div class="video__preview">
+                  <picture>
+                    <source srcset="/img/common/video-preview.webp" type="image/webp"/><img src="/img/common/video-preview.jpg" loading="lazy" alt="image"/>
+                  </picture>
                 </div>
                 <div class="video__action">
+                  <div class="video__title">Video about our work</div>
                   <div class="video__button">
                     <svg width="70" height="70">
                       <use xlink:href="/img/sprites/sprite.svg#ic_play"></use>
-                    </svg><span>Смотреть видео </span>
+                    </svg><span>Watch the video</span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="video-block__contact">
               <div class="video-block__alltime">
-                <svg width="25" height="25">
+                <svg width="63" height="63">
                   <use xlink:href="/img/sprites/sprite.svg#ic_call24red"></use>
                 </svg><span>Service call</span>
               </div>
@@ -329,60 +384,629 @@
           </div>
         </div>
       </section>
-      <section class="section-areas-block">
-        <div class="container">areas-block</div>
-      </section>
       <section class="section-our-clients">
-        <div class="container">our-clients</div>
-      </section>
-      <section class="section-our-rewiew">
-        <div class="container">our-rewiew</div>
-      </section>
-      <section class="section-our-blog">
-        <div class="container">our-blog</div>
-      </section>
-      <section class="section-contact-block">
-        <div class="container">contact-block</div>
-      </section>
-    </main>
-    <footer>
-      <div class="footer">
-        <div class="container">footer</div>
-      </div>
-            <div class="main-menu">
-              <div class="main-menu__wrp">
-                <div class="main-menu__close"></div>
-                <div class="main-menu__nav">
-                  <nav>
-                    <ul>
-                      <li><a href="catalog.html">Каталог недвижимости</a></li>
-                      <li><a href="shop.html">Купить</a></li>
-                      <li><a href="rent.html">Арендовать</a></li>
-                      <li><a href="#">Сoбственникам</a></li>
-                      <li><a href="about.html">О компании</a></li>
-                    </ul>
-                  </nav>
-                </div>
-                <div class="main-menu__phones">
-                  <div class="main-menu__number"><a href="#">+7 495 799 34 99</a></div>
-                  <div class="main-menu__worktime"><span>Работаем с 9.00 до 19.00</span></div>
-                </div>
-                <div class="main-menu__msgr">
-                  <ul>
-                    <li class="ic_wa"><a href="#">
-                        <svg width="25" height="25">
-                          <use xlink:href="/img/sprites/sprite.svg#ic_wa"></use>
-                        </svg></a></li>
-                    <li class="ic_tg"><a href="#">
-                        <svg width="25" height="25">
-                          <use xlink:href="/img/sprites/sprite.svg#ic_tg"></use>
-                        </svg></a></li>
-                  </ul>
+        <div class="container">
+          <div class="our-clients">
+            <div class="our-clients__title">Our Сlients</div>
+            <div class="our-clients__list">
+              <div class="swiper-container" data-swiper="clients">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><a href="#">
+                      <picture>
+                        <source srcset="/img/clients/c1.webp" type="image/webp"/><img src="/img/clients/c1.png" loading="lazy" alt="image"/>
+                      </picture></a></div>
+                  <div class="swiper-slide"><a href="#">
+                      <picture>
+                        <source srcset="/img/clients/c2.webp" type="image/webp"/><img src="/img/clients/c2.png" loading="lazy" alt="image"/>
+                      </picture></a></div>
+                  <div class="swiper-slide"><a href="#">
+                      <picture>
+                        <source srcset="/img/clients/c3.webp" type="image/webp"/><img src="/img/clients/c3.png" loading="lazy" alt="image"/>
+                      </picture></a></div>
+                  <div class="swiper-slide"><a href="#">
+                      <picture>
+                        <source srcset="/img/clients/c4.webp" type="image/webp"/><img src="/img/clients/c4.png" loading="lazy" alt="image"/>
+                      </picture></a></div>
+                  <div class="swiper-slide"><a href="#">
+                      <picture>
+                        <source srcset="/img/clients/c5.webp" type="image/webp"/><img src="/img/clients/c5.png" loading="lazy" alt="image"/>
+                      </picture></a></div>
+                  <div class="swiper-slide"><a href="#">
+                      <picture>
+                        <source srcset="/img/clients/c6.webp" type="image/webp"/><img src="/img/clients/c6.png" loading="lazy" alt="image"/>
+                      </picture></a></div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-areas-block">
+        <div class="section-areas-block__bg">
+          <picture>
+            <source srcset="/img/common/areas-bg.webp" type="image/webp"/><img src="/img/common/areas-bg.jpg" loading="lazy" alt="image"/>
+          </picture>
+        </div>
+        <div class="section-areas-block__content">
+          <div class="container">
+            <div class="areas-block">
+              <div class="areas-block__label"><span>Locattions</span></div>
+              <div class="areas-block__title">Areas Of Locksmith Service</div>
+              <div class="areas-block__list">
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith North Vancouver</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith Vancouver</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith Burnaby</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith Coquitlam</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith Shaughnessy</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith Yaletown</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith East Vancouver</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith Annacis Island</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith Oakridge</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith Point Grey</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith New Westminster</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith Surrey</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith Richmond</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith Delta</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith Port Mody</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith Tsawwassen</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith West Vancouver</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith Abbotsford</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith Port Coquitlam</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith UBC</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith White Rock</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith Langley</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith Aldergrove</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith Downtown Vancouver</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith Ladner</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith Maple Ridge</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith Mission</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith Pitt Meadows</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith Kitsilano</a></div>
+                  </div>
+                </div>
+                <div class="areas-block__item">
+                  <div class="areas-item">
+                    <div class="areas-item__icon">
+                      <svg width="21" height="21">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                      </svg>
+                    </div>
+                    <div class="areas-item__link"><a href="#">Locksmith Marpole</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-our-rewiew">
+        <div class="container">
+          <div class="our-rewiew">
+            <div class="our-rewiew__label"><span>Reviews</span></div>
+            <div class="our-rewiew__title">Our Reviews</div>
+            <div class="our-rewiew__slider">
+              <div class="swiper-container" data-swiper="review">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="card-review">
+                      <div class="card-review__head">
+                        <div class="card-review__photo">
+                          <picture>
+                            <source srcset="/img/common/user1.webp" type="image/webp"/><img src="/img/common/user1.jpg" loading="lazy" alt="image"/>
+                          </picture>
+                        </div>
+                        <div class="card-review__userdata">
+                          <div class="card-review__name">Amilie Thomas</div>
+                          <div class="card-review__stars"><span class="review-stars" style="background-image: url('/img/svg/ic_rating.svg')"></span></div>
+                        </div>
+                      </div>
+                      <div class="card-review__main">
+                        <div class="card-review__text"><span>called TOP Locksmith Vancouver locksmith to find out why my lock wasnt working. They arrived within the hour and replaced my old castle with a high security lock. Glory to their quick action.</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-review">
+                      <div class="card-review__head">
+                        <div class="card-review__photo">
+                          <picture>
+                            <source srcset="/img/common/user2.webp" type="image/webp"/><img src="/img/common/user2.jpg" loading="lazy" alt="image"/>
+                          </picture>
+                        </div>
+                        <div class="card-review__userdata">
+                          <div class="card-review__name">Nina Simone</div>
+                          <div class="card-review__stars"><span class="review-stars" style="background-image: url('/img/svg/ic_rating.svg')"></span></div>
+                        </div>
+                      </div>
+                      <div class="card-review__main">
+                        <div class="card-review__text"><span>Great people outstanding service , the valued employee Alan treats the company as if it was his own and actually even better because it’s not. He goes way out of his way to make sure everything from all ends are looked after . I had a pleasure dealing with this company.</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-review">
+                      <div class="card-review__head">
+                        <div class="card-review__photo">
+                          <picture>
+                            <source srcset="/img/common/user3.webp" type="image/webp"/><img src="/img/common/user3.jpg" loading="lazy" alt="image"/>
+                          </picture>
+                        </div>
+                        <div class="card-review__userdata">
+                          <div class="card-review__name">Nina Simone</div>
+                          <div class="card-review__stars"><span class="review-stars" style="background-image: url('/img/svg/ic_rating.svg')"></span></div>
+                        </div>
+                      </div>
+                      <div class="card-review__main">
+                        <div class="card-review__video">
+                          <div class="video" data-id="https://www.youtube.com/watch?v=7_-iNufEXsM">
+                            <div class="video__preview">
+                              <picture>
+                                <source srcset="/img/common/preview-video-review.webp" type="image/webp"/><img src="/img/common/preview-video-review.jpg" loading="lazy" alt="image"/>
+                              </picture>
+                            </div>
+                            <div class="video__action">
+                              <div class="video__button">
+                                <svg width="52" height="52">
+                                  <use xlink:href="/img/sprites/sprite.svg#ic_play"></use>
+                                </svg><span>Watch the video review</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-review">
+                      <div class="card-review__head">
+                        <div class="card-review__photo">
+                          <picture>
+                            <source srcset="/img/common/user2.webp" type="image/webp"/><img src="/img/common/user2.jpg" loading="lazy" alt="image"/>
+                          </picture>
+                        </div>
+                        <div class="card-review__userdata">
+                          <div class="card-review__name">Nina Simone</div>
+                          <div class="card-review__stars"><span class="review-stars" style="background-image: url('/img/svg/ic_rating.svg')"></span></div>
+                        </div>
+                      </div>
+                      <div class="card-review__main">
+                        <div class="card-review__text"><span>Great people outstanding service , the valued employee Alan treats the company as if it was his own and actually even better because it’s not. He goes way out of his way to make sure everything from all ends are looked after . I had a pleasure dealing with this company.</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-nav">
+                <div class="swiper-nav__prev" data-swiper-prev="review">
+                  <svg width="35" height="35">
+                    <use xlink:href="/img/sprites/sprite.svg#ic_swiper-prev"></use>
+                  </svg>
+                </div>
+                <div class="swiper-nav__counter">Review <span class="review-counter-current">1</span> of <span class="review-counter-total">4</span></div>
+                <div class="swiper-nav__next" data-swiper-next="review">
+                  <svg width="35" height="35">
+                    <use xlink:href="/img/sprites/sprite.svg#ic_swiper-next"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-our-blog">
+        <div class="container container--large">
+          <div class="our-blog">
+            <div class="our-blog__label"><span>LATEST POST</span></div>
+            <div class="our-blog__title">Our Blog</div>
+            <div class="our-blog__wrp">
+              <div class="our-blog__main">
+                <div class="blog-main">
+                  <div class="blog-main__bg">
+                    <picture>
+                      <source srcset="/img/common/blog-post-main.webp" type="image/webp"/><img src="/img/common/blog-post-main.jpg" loading="lazy" alt="image"/>
+                    </picture>
+                  </div>
+                  <div class="blog-main__content">
+                    <div class="blog-main__details">
+                      <div class="blog-main__date"><span class="blog-date">12.12.2021</span></div>
+                      <div class="blog-main__title"><a href="#">Biggest Bank Robberies of the 21st Century</a></div>
+                      <div class="blog-main__desc"><span>Available any time of day or night, in and around Vancouver. Fastest arrival at any address.</span></div>
+                      <div class="blog-main__more"><a href="#">
+                          <svg width="38" height="38">
+                            <use xlink:href="/img/sprites/sprite.svg#ic_link-arrow"></use>
+                          </svg><span>Learn more</span></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="our-blog__last">
+                <div class="our-blog__list">
+                  <div class="our-blog__item">
+                    <div class="blog-mini">
+                      <div class="blog-mini__date"><span class="blog-date">12.12.2021</span></div>
+                      <div class="blog-mini__title"><a href="#">Is picking a lock easy?</a></div>
+                      <div class="blog-mini__desc"><span>The easiest way to pick a lock is to utilize the quick and also dirty method: scrubbing up. The stress wrench is the trick (no pun planned) to efficiently selecting a lock. So take your tension wrench as well as area it in all-time low of the crucial hole. </span></div>
+                      <div class="blog-mini__more"><a href="#">
+                          <svg width="38" height="38">
+                            <use xlink:href="/img/sprites/sprite.svg#ic_link-arrow"></use>
+                          </svg><span>Learn more</span></a></div>
+                    </div>
+                  </div>
+                  <div class="our-blog__item">
+                    <div class="blog-mini">
+                      <div class="blog-mini__date"><span class="blog-date">12.12.2021</span></div>
+                      <div class="blog-mini__title"><a href="#">Which locks are the hardest to pick?</a></div>
+                      <div class="blog-mini__desc"><span>As a general guideline, combination locks are more difficult to select (fracture) than the pin and also stemless glass locks. The exemption is baggage combo locks, the code to which </span></div>
+                      <div class="blog-mini__more"><a href="#">
+                          <svg width="38" height="38">
+                            <use xlink:href="/img/sprites/sprite.svg#ic_link-arrow"></use>
+                          </svg><span>Learn more</span></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-contact-block">
+        <div class="contact-block">
+          <div class="contact-block__bg">
+            <picture>
+              <source srcset="/img/common/contact-bg.webp" type="image/webp" media="(min-width: 1200px)"/>
+              <source srcset="/img/common/contact-bg.jpg" type="image/jpg" media="(min-width: 1200px)"/>
+              <source srcset="/img/common/contact-bg_760.webp" type="image/webp" media="(min-width: 767px)"/>
+              <source srcset="/img/common/contact-bg_760.jpg" type="image/jpg" media="(min-width: 767px)"/>
+              <source srcset="/img/common/contact-bg_480.webp" type="image/webp" media="(min-width: 480px)"/>
+              <source srcset="/img/common/contact-bg_480.jpg" type="image/jpg" media="(min-width: 480px)"/><img src="/img/common/contact-bg_480.jpg" loading="lazy" alt="Background"/>
+            </picture>
+          </div>
+          <div class="contact-block__content">
+            <div class="container">
+              <div class="contact-block__wrp">
+                <div class="contact-block__title">Get In touch</div>
+                <div class="contact-block__desc">Have a question or enquiry? Drop us an email or message us on our social channels and we’ll get back to you as soon as possible.</div>
+                <div class="contact-block__form">
+                  <form action="#" method="POST">
+                    <div class="form">
+                      <div class="form__item">
+                        <div class="form__subitem">
+                          <input type="text" placeholder="Name*"/>
+                        </div>
+                        <div class="form__subitem">
+                          <input type="tel" placeholder="Telephone*"/>
+                        </div>
+                      </div>
+                      <div class="form__item">
+                        <div class="form__subitem">
+                          <textarea placeholder="How can we hep you?"></textarea>
+                        </div>
+                      </div>
+                      <div class="form__item">
+                        <div class="form__subitem">
+                          <button class="btn btn-black">Send Message</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-main">
+        <div class="container container--large">
+          <div class="footer">
+            <div class="footer__logo"><a href="/"><span class="bgimage" style="background-image: url(/img/common/logo.svg)"> </span></a></div>
+            <div class="footer__nav">
+              <nav>
+                <ul class="nav-menu">
+                  <li><a href="services.html"><span>Our Services</span><span class="arrow-menu"></span></a>
+                    <ul class="sub-menu">
+                      <li><a href="#"><span>Emergency Locksmith</span></a></li>
+                      <li><a href="#"><span>Residental Locksmith</span></a></li>
+                      <li><a href="#"><span>Mobile Locksmith</span></a></li>
+                      <li><a href="#"><span>Comercial Locksmith</span></a></li>
+                      <li><a href="#"><span>services 5</span></a></li>
+                    </ul>
+                  </li>
+                  <li><a href="location.html"><span>Location</span><span class="arrow-menu"></span></a>
+                    <ul class="sub-menu">
+                      <li><a href="#"><span>Locksmith Vancouver</span></a></li>
+                      <li><a href="#"><span>Locksmith Burnaby</span></a></li>
+                      <li><a href="#"><span>Locksmith Abbotsford</span></a></li>
+                      <li><a href="#"><span>Locksmith Coquitlam</span></a></li>
+                      <li><a href="#"><span>Locksmith Surrey</span></a></li>
+                    </ul>
+                  </li>
+                  <li><a href="clients.html"><span>Clients</span></a>
+                  </li>
+                  <li><a href="project.html"><span>Precent Project</span></a>
+                  </li>
+                  <li><a href="contact.html"><span>Contact</span></a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer__phones">
+              <div class="footer__number"><a href="#">(604) 227 - 9083</a></div>
+            </div>
+            <div class="footer__btn">
+              <button class="btn">Get free Quote</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container container--large">
+          <div class="footer-copyright__text">Copyright © 2021. Fast Locksmith Vancouver. All Rights Reserved</div>
+          <div class="footer-copyright__privacy"><a href="#">Privacy Policy</a>|<a href="#">Terms & Conditions</a></div>
+        </div>
+      </div>
     </footer>
-    <script src="js/main.js?v=1.52"></script>
-    <script src="js/vendor.js"></script>
+    <script src="/js/lib/swiper-bundle.min.js"></script>
+    <script src="/js/page/home.js"></script>
   </body>
 </html>

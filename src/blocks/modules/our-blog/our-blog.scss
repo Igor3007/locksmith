@@ -1,0 +1,247 @@
+.section-our-blog {
+    @include section-padding;
+}
+
+.our-blog {
+
+    &__wrp {
+        @include row-flex;
+    }
+
+    &__main {
+        @include col;
+        @include size(12);
+        @include size-w992(7);
+        @include size-w1200(7.8);
+    }
+
+    &__last {
+        @include col;
+        @include size(12);
+        @include size-w992(5);
+        @include size-w1200(4.2);
+    }
+
+    &__label {
+
+        display: none;
+
+        @media screen and (min-width: $w760) {
+            padding-bottom: 15px;
+            display: block;
+
+            & span {
+                padding: 7px 16px;
+                background: #BF3232;
+                border-radius: 10px;
+                font-size: 14px;
+                color: #fff;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &__title {
+        @include section-title;
+        padding-bottom: 35px;
+    }
+
+    &__last {
+        display: none;
+
+        @media screen and (min-width: $w760) {
+            display: block;
+        }
+    }
+
+    &__item {
+        padding-top: 55px;
+
+        @media screen and (min-width: $w992) {
+            padding-top: 0;
+            padding-bottom: 55px;
+        }
+    }
+}
+
+.blog-main {
+
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &__bg {
+        @include layer(1);
+
+        & picture {
+            width: 100%;
+            height: 100%;
+
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+        padding-top: 90%;
+
+        @media screen and (min-width: $w760) {
+            padding-top: 50%;
+        }
+
+        @media screen and (min-width: $w1200) {
+            padding-top: 43%;
+        }
+
+        @media screen and (min-width: $w1440) {
+            padding-top: 40%;
+        }
+    }
+
+    &__details {
+        background: rgba(36, 36, 36, 0.8);
+        border-radius: 0px 0px 10px 10px;
+        color: #fff;
+        padding: 30px;
+        position: relative;
+
+        & a {
+            color: #fff
+        }
+    }
+
+    &__date {
+
+        position: absolute;
+        top: 0;
+        transform: translateY(-50%);
+    }
+
+    &__title {
+        & a {
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 120%;
+            color: #FFFFFF;
+
+            @include line-clamp(2);
+
+            @media screen and (min-width: $w760) {
+                font-size: 28px;
+            }
+        }
+
+        padding-bottom: 15px;
+    }
+
+    &__desc {
+        padding-bottom: 15px;
+        font-size: 16px;
+
+        & span {
+            @include line-clamp(3);
+        }
+
+        @media screen and (min-width: $w760) {
+            font-size: 18px;
+        }
+    }
+
+    &__more {
+        & a {
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            & svg {
+                margin-right: 15px;
+            }
+
+            & span {
+                font-weight: 600;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.blog-mini {
+    &__title {
+
+        padding-bottom: 15px;
+
+        & a {
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 35px;
+            color: #1B1A1C;
+        }
+    }
+
+    &__date {
+        padding-bottom: 20px;
+    }
+
+    &__desc {
+        font-size: 18px;
+        line-height: 23px;
+        color: #838383;
+
+        & span {
+            @include line-clamp(4);
+        }
+
+        padding-bottom: 15px;
+    }
+
+    &__desc {
+        padding-bottom: 15px;
+        font-size: 16px;
+
+        @media screen and (min-width: $w760) {
+            font-size: 18px;
+        }
+    }
+
+    &__more {
+        & a {
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            & svg {
+                margin-right: 15px;
+            }
+
+            & span {
+                font-weight: 600;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.blog-date {
+
+    padding: 7px 16px;
+    background: #1B1A1C;
+    border-radius: 10px;
+
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+
+}

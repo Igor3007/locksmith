@@ -38,7 +38,7 @@ select {
 
     height: $select-height;
 
-    @media screen and (max-width: $w1280) {
+    @media screen and (max-width: $w1200) {
         height: rem(45);
     }
 }
@@ -62,7 +62,7 @@ select {
     justify-content: space-between;
     height: 100%;
 
-    @media screen and (max-width: $w1280) {
+    @media screen and (max-width: $w1200) {
         // padding: rem(8) 0;
         font-size: 14px
             /*14*/
@@ -172,7 +172,7 @@ select {
         text-overflow: ellipsis;
         overflow: hidden;
 
-        @media screen and (max-width: $w1280) {
+        @media screen and (max-width: $w1200) {
             font-size: 13px;
         }
 

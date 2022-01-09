@@ -5,7 +5,7 @@
     +icons('#ic_arr-right', 18)
 
 .header-main
-  .container
+  .container.container--large
     .header
       .header__mobile
         .btn-burger
@@ -19,9 +19,26 @@
 
       .header__nav
         nav
-          ul
+          ul.nav-menu
             each item in app.mainMenu
-              li: a(href=item.href)= item.text
+              li
+                a(href=item.href)
+                  span= item.text
+                  if(item.sub)
+                    span.arrow-menu
+                if(item.sub)
+                  ul.sub-menu
+                    each sub in item.sub
+                      li
+                        a(href='#')
+                          span= sub.text
+                          if(sub.sub)
+                            span.arrow-menu
+                        if(sub.sub)
+                          ul.sub-menu
+                            each sub2 in sub.sub
+                              li: a(href='#')= sub2.text
+        span.close-menu(data-menu="close"): +icons('#ic_cross', 40)
 
       .header__phones
         .header__number: a(href='#')

@@ -2,6 +2,7 @@ mixin our-services
   section.section-our-services
     .container
       .our-services
+        .our-services__label: span Fast locksmith
         .our-services__title Our Services
         .our-services__list
           each item in app.service
@@ -14,8 +15,9 @@ mixin card-service(data)
       picture
         img(src=""+data.icon+"" alt="service")
     .card-service__title= data.title 
-    .card-service__desc= data.desc
+    .card-service__desc
+      span= data.desc
     .card-service__link
       a(href='#')
-        +icons('#ic_link-arrow')
+        +icons('#ic_link-arrow', 38)
         span Learn more

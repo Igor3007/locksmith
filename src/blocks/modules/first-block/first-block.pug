@@ -2,7 +2,13 @@
 mixin first-block
   section.section-first-block
     .first-block
-      .first-block__bg: +picture('common/first-block-bg')
+      .first-block__bg
+        +pictureResp({
+          w1200: '/img/common/first-block-bg',
+          w760: '/img/common/first-block-bg_760',
+          w480: '/img/common/first-block-bg_480',
+          def: '/img/common/first-block-bg_480',
+        })
       .first-block__content
         .container
           .first-block__main
@@ -10,7 +16,7 @@ mixin first-block
             .first-block__subtitle Instant response a prices you can afford <br> Call us today at (604)227-9083 
             .first-block__rating
               each item in app.rating
-                +rating-badge(item)
+                +rating-badge(item) 
 
           .first-block__form: +order-form()
 
@@ -21,13 +27,15 @@ mixin order-form
       .order-form__fields  
         form(action='#' method='POST')
           .form
-            .form__item: .form__subitem: input(type="text" placeholder="Name*")
-            .form__item.form__item--phone: .form__subitem: input(type="text" placeholder="Telephone*")
-            .form__item: .form__subitem: +select(['Service Needs', 'Service 1', 'Service 2', 'Service 3'])
-            .form__item.form__item--btn
-              .form__subitem: button.btn.btn-black.btn-full Request service
+            .form__item
+              .form__subitem: input(type="text" placeholder="Name*")
+              .form__subitem.form__subitem--phone: input(type="text" placeholder="Telephone*")
+            .form__item
+              .form__subitem: +select(['Service Needs', 'Service 1', 'Service 2', 'Service 3'])
+              .form__subitem.form__subitem--btn
+                button.btn.btn-black.btn-full Request service
 
-mixin rating-badge(data)
+mixin rating-badge(data) 
   .rating-badge
     .rating-badge__icon
       picture

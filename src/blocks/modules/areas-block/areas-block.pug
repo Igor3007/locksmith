@@ -1,4 +1,17 @@
 mixin areas-block
   section.section-areas-block
-    .container areas-block
+    .section-areas-block__bg
+      +picture('/img/common/areas-bg')
+    .section-areas-block__content
+      .container
+        .areas-block
+          .areas-block__label: span Locattions
+          .areas-block__title Areas Of Locksmith Service
+          .areas-block__list
+            each item in app.areas
+              .areas-block__item
+                .areas-item
+                  .areas-item__icon: +icons('#ic_pen', 21)
+                  .areas-item__link: a(href='#')= item
+
 

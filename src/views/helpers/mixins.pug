@@ -1,7 +1,7 @@
 include ../../blocks/components/headers/headers 
 include ../../blocks/components/select/select
 
-mixin picture(url)
+mixin picture2(url)
   picture
     source(srcset='/img/'+url+'.webp' type="image/webp" media='(min-width: 1200px)')
     source(srcset='/img/crop/w1200/'+url+'.webp' type="image/webp" media='(min-width: 767px)')
@@ -11,6 +11,32 @@ mixin picture(url)
     source(srcset='/img/crop/w1200/'+url+'.jpg' media='(min-width: 767px)')
     source(srcset='/img/crop/w760/'+url+'.jpg' media='(min-width: 480px)')
     img(src='/img/crop/w480/'+url+'.jpg ' loading='lazy' alt='Background')
+
+mixin picture(url)
+  picture
+    source(srcset=''+url+'.webp' type="image/webp" )
+    img(src=''+url+'.jpg' loading='lazy' alt='image')
+mixin picturePng(url)
+  picture
+    source(srcset=''+url+'.webp' type="image/webp" )
+    img(src=''+url+'.png' loading='lazy' alt='image')
+mixin pictureResp(url)
+  picture
+
+    if(url.w1200)
+      source(srcset=''+url.w1200+'.webp' type="image/webp" media='(min-width: 1200px)')
+      source(srcset=''+url.w1200+'.jpg' type="image/jpg" media='(min-width: 1200px)')
+
+    if(url.w760)
+      source(srcset=''+url.w760+'.webp' type="image/webp" media='(min-width: 767px)')
+      source(srcset=''+url.w760+'.jpg' type="image/jpg" media='(min-width: 767px)')
+
+    if(url.w480)
+      source(srcset=''+url.w480+'.webp' type="image/webp" media='(min-width: 480px)')
+      source(srcset=''+url.w480+'.jpg' type="image/jpg" media='(min-width: 480px)')
+
+    if(url.def)
+      img(src=''+url.def+'.jpg' loading='lazy' alt='Background')
 
 
 mixin icons(id, size)

@@ -1,5 +1,134 @@
 .section-advantages-block {
     @include section-padding;
+    overflow: visible
+}
+
+
+
+.advantages-block {
+    &__title {
+        @include section-title;
+        padding-bottom: 25px;
+    }
+
+    &__bg {
+        display: none;
+
+        @media screen and (min-width: $w1440) {
+            & img {
+                max-width: 495px;
+            }
+        }
+
+        @media screen and (min-width: $w1200) {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            z-index: -1;
+
+            & img {
+                max-width: 400px;
+            }
+
+        }
+    }
+
+    &__label {
+
+        display: none;
+
+        @media screen and (min-width: $w760) {
+            padding-bottom: 15px;
+            display: block;
+
+            & span {
+                padding: 7px 16px;
+                background: #BF3232;
+                border-radius: 10px;
+                font-size: 14px;
+                color: #fff;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 150%;
+        color: #838383;
+        padding-bottom: 30px;
+    }
+
+    &__img {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    &__items {
+        padding-bottom: 25px;
+
+        @media screen and (min-width: $w1440) {
+            padding-left: 30px;
+        }
+
+        @media screen and (min-width: $w1200) {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-bottom: 0;
+        }
+    }
+
+    &__wrp {
+        padding-bottom: 25px;
+
+        @include row-flex;
+        flex-direction: row-reverse;
+    }
+
+    &__items {
+        @include col;
+        @include size(12);
+        @include size-w992(6);
+        @include size-w1200(4.2);
+    }
+
+    &__img {
+        @include col;
+        @include size(12);
+        @include size-w992(6);
+        @include size-w1200(7.8);
+    }
+
+    &__subtitle {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 30px;
+        color: #1B1A1C;
+        padding-bottom: 25px;
+    }
+
+    &__more {
+        & a {
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            & svg {
+                margin-right: 15px;
+            }
+
+            & span {
+                font-weight: 600;
+                font-size: 18px;
+            }
+        }
+    }
 }
 
 
@@ -8,16 +137,24 @@
     align-items: center;
     margin-bottom: 15px;
 
+    &__title {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 120%;
+        color: #1B1A1C;
+        padding-bottom: 5px;
+    }
+
     &__icon {
-        margin-right: 15px;
+        margin-right: 20px;
         width: 49px;
         min-width: 49px;
     }
-}
 
-.advantages-block {
-    &__title {
-        @include section-title;
-        padding-bottom: 25px;
+    &__desc {
+        color: #838383;
+        font-size: 16px
     }
+
+
 }

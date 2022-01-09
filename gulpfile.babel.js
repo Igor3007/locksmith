@@ -25,14 +25,34 @@ const requireDir = require("require-dir"),
                 "./src/styles/**/*.{scss,sass}"
             ]
         },
-        scripts: {
-            src: "./src/js/",
-            dist: "./dist/js/",
+        // scripts: {
+        //     src: "./src/js/",
+        //     dist: "./dist/js/",
+        //     watch: [
+        //         "./src/blocks/**/*.js",
+        //         "./src/js/**/*.js"
+        //     ]
+        // },
+
+        libs: {
+            src: "./src/js/lib/*.js",
+            dist: "./dist/js/lib/",
             watch: [
                 "./src/blocks/**/*.js",
                 "./src/js/**/*.js"
             ]
         },
+
+        pagejs: {
+            src: "./src/js/page/*.js",
+            dist: "./dist/js/page/",
+            watch: [
+                "./src/blocks/**/*.js",
+                "./src/js/**/*.js"
+            ]
+        },
+
+
         images: {
             src: [
                 "./src/img/**/*.{jpg,jpeg,png,gif,svg}",
@@ -55,8 +75,8 @@ const requireDir = require("require-dir"),
         },
         webp: {
             src: [
-                //"./src/img/**/*.{jpg,jpeg,png,tiff}",
-                "./dist/img/**/*.{jpg,jpeg,png,tiff}",
+                "./src/img/**/*.{jpg,jpeg,png,tiff}",
+                //"./dist/img/**/*.{jpg,jpeg,png,tiff}",
                 "!./src/img/favicon/*.{jpg,jpeg,png,gif}"
             ],
             dist: "./dist/img/",
@@ -92,7 +112,7 @@ export {
 };
 
 export const development = gulp.series("clean", "smart-grid",
-    gulp.parallel(["views", "styles", "scripts", "images", "crop", "webp", "sprites", "fonts", "favicons"]),
+    gulp.parallel(["views", "styles", "pagejs", "images", "webp", "libs", "sprites", "fonts", "favicons"]),
     gulp.parallel("serve"));
 
 export const prod = gulp.series("clean",

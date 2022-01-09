@@ -1,8 +1,45 @@
-include ../main-menu/main-menu.pug
 
-.footer
-  .container footer
+.footer-main
+  .container.container--large
+    .footer
+
+      .footer__logo
+        a(href='/')
+          span.bgimage(style="background-image: url(/img/common/logo.svg)") 
+
+      .footer__nav
+        nav
+          ul.nav-menu
+            each item in app.mainMenu
+              li
+                a(href=item.href)
+                  span= item.text
+                  if(item.sub)
+                    span.arrow-menu
+                if(item.sub)
+                  ul.sub-menu
+                    each sub in item.sub
+                      li
+                        a(href='#')
+                          span= sub.text
+
+      .footer__phones
+        .footer__number
+          a(href='#') (604) 227 - 9083
+
+      .footer__btn
+        button.btn Get free Quote
+
+.footer-copyright
+  .container.container--large
+    .footer-copyright__text Copyright © 2021. Fast Locksmith Vancouver. All Rights Reserved
+    .footer-copyright__privacy
+      a(href='#') Privacy Policy
+      ||
+      a(href='#') Terms & Conditions
 
 
-+main-menu(app.mainMenu)
+
+
+
 

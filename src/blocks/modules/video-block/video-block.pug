@@ -2,13 +2,17 @@ include ../../components/video/video.pug
 
 mixin video-block
   section.section-video-block
-    .container
+    .container.container--large
       .video-block
         .video-block__player
-          +video('')
+          +video({
+            link: 'https://www.youtube.com/watch?v=7_-iNufEXsM',
+            preview: '/img/common/video-preview',
+            title: 'Video about our work',
+          })
         .video-block__contact
           .video-block__alltime
-            +icons('#ic_call24red')
+            +icons('#ic_call24red', 63)
             span Service call
 
           .video-block__worktime

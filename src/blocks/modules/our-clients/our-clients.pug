@@ -4,8 +4,9 @@ mixin our-clients
       .our-clients
         .our-clients__title Our Сlients
         .our-clients__list
-          .swiper-container(data-swiper="clients")
-            .swiper-wrapper
-              each item in [1,2,3,4,5,6]
-                .swiper-slide: a(href='#'): +picturePng('/img/clients/c'+item+'')
-
+          .glide(data-glide='clients')
+            .glide__track(data-glide-el='track')
+              ul.glide__slides
+                each item in [1,2,3,4,5,6]
+                  li.glide__slide
+                    a(href='#'): +picturePng('/img/clients/c'+item+'')

@@ -1,0 +1,20 @@
+extends ../layouts/index
+
+include ../../blocks/modules/first-block/first-block.pug
+include ../../blocks/modules/areas-block/areas-block.pug
+include ../../blocks/modules/contact-block/contact-block.pug
+
+block variables
+  include ../../data/data.pug
+  - const title = "locksmith"
+
+
+block content
+
+  +first-block-min()
+  +areas-block({modify: 'min'})
+  +contact-block({modify: 'min'})
+
+
+block scripts
+  script(src="/js/page/home.js")

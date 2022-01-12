@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
   //   IMaskPhone.mask(document.querySelector("input[type=tel]"))
   // }
 
+ 
+
   /******************************************** 
   * mobile menu
   ********************************************/
@@ -58,76 +60,111 @@ document.addEventListener("DOMContentLoaded", function () {
 
   }
 
-  /******************************************** 
-  * data-swiper="clients"
-  ********************************************/
+  /* ============================== */
 
-  const clients = new Swiper('[data-swiper="clients"]', {
-     
-    slidesPerView: 6,
-    spaceBetween: 30,
-    loop: true,
-    autoplay: {
-        delay: 3000,
-      },
-     
-    
-      
-       
-  });
-
-
-  /******************************************** 
-  * data-swiper="review"
-  ********************************************/
-
-   function updateFraction(slider) {
-
-    const { params, activeIndex } = slider;
-
-    document.querySelector('.review-counter-current').innerHTML = (activeIndex + 1)
-    document.querySelector('.review-counter-total').innerHTML = (slider.slides.length)
-
-  }
-
-  const review = new Swiper('[data-swiper="review"]', {
-     
-    slidesPerView: 1,
-    spaceBetween: 0,
-    loop: false,
-    navigation: {
-      prevEl: '[data-swiper-prev="review"]',
-      nextEl: '[data-swiper-next="review"]',
-  },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      767: {
-        slidesPerView: 2,
-        spaceBetween: 30,
-      },
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 40,
-      },
-      
-    },
-
-    on: {
-      init() {
-        setTimeout(updateFraction, 0, this);
-      },
-      slideChange(event) {
-        updateFraction(this);
-      },
-      resize() {
-        updateFraction(this);
-      },
-    },
-       
-  });
-
+  
+  
 
 });//DOMContentLoaded
+
+  window.onload = function() {
+
+    
+  /******************************************** 
+  * perf-to-animate
+  ********************************************/
+
+    document.querySelector('body').classList.remove('perf-no-animation')
+
+  /******************************************** 
+  * load swiper
+  ********************************************/
+
+    
+
+    function loadScript(url, callback){
+      var script = document.createElement("script");
+      
+      if (script.readyState){  // IE
+          script.onreadystatechange = function(){
+          if (script.readyState == "loaded" ||
+                  script.readyState == "complete"){
+              script.onreadystatechange = null;
+              callback();
+          }
+          };
+      } else {  // Р”СЂСѓРіРёРµ Р±СЂР°СѓР·РµСЂС‹
+          script.onload = function(){
+          callback();
+          };
+      }
+      
+      script.src = url;
+      document.getElementsByTagName("head")[0].appendChild(script);
+  }
+
+  loadScript('/js/lib/glide.min.js', function(){
+    
+
+
+  /******************************************** 
+  * data-glide="clients"
+  ********************************************/
+
+  const clients =  new Glide('[data-glide="clients"]', {
+    type: 'carousel',
+    startAt: 0,
+    perView: 6,
+    autoplay: 3000
+  })
+
+  clients.mount();
+
+
+  /******************************************** 
+  * data-glide="review"
+  ********************************************/
+
+   var review = new Glide('[data-glide="review"]', {
+    type: 'carousel',
+    gap: 40,
+    perView: 3,
+    breakpoints: {
+      767: {
+        perView: 1,
+      },
+      1200: {
+        perView: 2,
+        gap: 30,
+      }
+       
+    },
+  })
+
+  review.mount();
+
+  document.querySelector('[data-swiper-prev="review"]').addEventListener('click', function(){
+    review.go('<')
+  })
+  document.querySelector('[data-swiper-next="review"]').addEventListener('click', function(){
+    review.go('>')
+  })
+
+  /* event */
+
+  let totalSlide = document.querySelectorAll('[data-glide="review"] .glide__slide:not(.glide__slide--clone)').length
+  document.querySelector('.review-counter-total').innerHTML = totalSlide
+
+  review.on(['mount', 'run'], function(event) {
+    document.querySelector('.review-counter-current').innerHTML = (review._i + 1)
+  })
+
+})
+
+  }//window.onload
+
+ 
+
+
+
 

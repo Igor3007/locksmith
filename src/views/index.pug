@@ -12,6 +12,7 @@ include ../blocks/modules/contact-block/contact-block.pug
 
 block variables
   include ../data/data.pug
+  - const title = "locksmith"
 
 
 block content
@@ -21,12 +22,11 @@ block content
   +advantages-block()
   +video-block()
   +our-clients()
-  +areas-block()
+  +areas-block({ modify: false })
   +our-rewiew()
   +our-blog()
-  +contact-block()
+  +contact-block({ modify: false })
 
 
 block scripts
-  script(src="/js/lib/swiper-bundle.min.js")
-  script(src="/js/page/home.js")
+  script(src="/js/page/home.js") 

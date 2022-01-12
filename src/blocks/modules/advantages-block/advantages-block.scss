@@ -58,6 +58,11 @@
         line-height: 150%;
         color: #838383;
         padding-bottom: 30px;
+
+        @media screen and (min-width: $w1200) {
+            max-width: 850px;
+            font-size: 18px;
+        }
     }
 
     &__img {

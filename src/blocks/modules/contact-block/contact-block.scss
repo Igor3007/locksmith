@@ -7,6 +7,10 @@
 .contact-block {
     position: relative;
 
+    &.section-contact-block--min {
+        margin: 0;
+    }
+
 
     &__bg {
         @include layer(1);
@@ -50,7 +54,13 @@
         color: #B7B7B7;
         padding-bottom: 25px;
         text-align: center;
+        line-height: 120%;
         font-size: 18px;
+
+        @media screen and (min-width: $w1200) {
+            font-size: 26px;
+            padding-bottom: 40px;
+        }
     }
 
     &__form {

@@ -1,17 +1,20 @@
-mixin areas-block
-  section.section-areas-block
+mixin areas-block(data)
+  section.section-areas-block(class=""+(data.modify ? 'section-areas-block--'+data.modify : '')+"")
     .section-areas-block__bg
       +picture('/img/common/areas-bg')
     .section-areas-block__content
       .container
         .areas-block
-          .areas-block__label: span Locattions
-          .areas-block__title Areas Of Locksmith Service
+          if(!data.modify)
+            .areas-block__label: span Locattions
+            .areas-block__title Areas Of Locksmith Service
           .areas-block__list
             each item in app.areas
               .areas-block__item
                 .areas-item
                   .areas-item__icon: +icons('#ic_pen', 21)
                   .areas-item__link: a(href='#')= item
+
+
 
 

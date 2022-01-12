@@ -1,13 +1,14 @@
 .section-our-services {
     @include section-padding;
+
+    @media screen and (min-width: $w1200) {
+        padding-top: 75px;
+    }
 }
 
 .our-services {
     &__title {
-        font-weight: bold;
-        font-size: 36px;
-        line-height: 117.2%;
-        color: #1B1A1C;
+        @include section-title;
         padding-bottom: 55px;
     }
 

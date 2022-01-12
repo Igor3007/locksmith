@@ -35,6 +35,10 @@ header {
     align-items: center;
     padding-top: 15px;
 
+    @media screen and (min-width: $w1200) {
+        padding-top: 38px;
+    }
+
     &__mobile {
         padding-right: 25px;
 

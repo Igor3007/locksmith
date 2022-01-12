@@ -71,6 +71,7 @@
     },
     "dependencies": {
         "@fancyapps/ui": "^4.0.4",
+        "@glidejs/glide": "^3.5.2",
         "gulp-image-resize": "^0.13.1",
         "inputmask": "^5.0.5",
         "lazysizes": "^5.3.2",

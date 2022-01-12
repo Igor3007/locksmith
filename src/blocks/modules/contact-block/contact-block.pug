@@ -1,7 +1,6 @@
 
-mixin contact-block
-  section.section-contact-block
-
+mixin contact-block(data)
+  section.section-contact-block(class=""+(data.modify ? 'section-contact-block--'+data.modify : '')+"")
     .contact-block
       .contact-block__bg
 
@@ -11,6 +10,7 @@ mixin contact-block
           w480: '/img/common/contact-bg_480',
           def: '/img/common/contact-bg_480',
         })
+
       .contact-block__content
         .container
           .contact-block__wrp

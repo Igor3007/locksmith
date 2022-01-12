@@ -1,4 +1,6 @@
 
+include ../../components/breadcrumb/breadcrumb.pug
+
 mixin first-block
   section.section-first-block
     .first-block
@@ -19,6 +21,27 @@ mixin first-block
                 +rating-badge(item) 
 
           .first-block__form: +order-form()
+
+mixin first-block-min
+  section.section-first-block
+    .first-block.first-block--min
+      .first-block__bg
+        +pictureResp({
+          w1200: '/img/common/first-block-bg',
+          w760: '/img/common/first-block-bg_760',
+          w480: '/img/common/first-block-bg_480',
+          def: '/img/common/first-block-bg_480',
+        })
+      .first-block__content
+        .container
+          .page-head
+            .page-head__title: h1 Our Locations
+            .page-head__breadcrumb: +breadcrumb([
+              'Main',
+              'Our Locations',
+            ])        
+
+
 
 mixin order-form
   .order-form          

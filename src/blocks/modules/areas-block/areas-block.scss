@@ -1,9 +1,17 @@
 .section-areas-block {
     @include section-padding;
 
+    @media screen and (min-width: $w1200) {
+        padding-top: 75px;
+    }
+
     @media screen and (min-width: $w760) {
         margin-top: 50px;
         margin-bottom: 50px;
+    }
+
+    &.section-areas-block--min {
+        margin: 0;
     }
 
     &__bg {

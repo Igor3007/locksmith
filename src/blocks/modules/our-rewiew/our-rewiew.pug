@@ -7,14 +7,15 @@ mixin our-rewiew
         .our-rewiew__label: span Reviews
         .our-rewiew__title Our Reviews
         .our-rewiew__slider
-          .swiper-container(data-swiper="review")
-            .swiper-wrapper
-              each item in app.review
-                .swiper-slide
-                  if(item.type == "text")
-                    +card-review(item)
-                  if(item.type == "video")
-                    +card-review-video(item)
+          .glide(data-glide='review')
+            .glide__track(data-glide-el='track')
+              ul.glide__slides
+                each item in app.review
+                  li.glide__slide
+                    if(item.type == "text")
+                      +card-review(item)
+                    if(item.type == "video")
+                      +card-review-video(item)
           .swiper-nav
             .swiper-nav__prev(data-swiper-prev="review"): +icons('#ic_swiper-prev', 35)
             .swiper-nav__counter Review <span class="review-counter-current">1</span> of <span class="review-counter-total">4</span>
@@ -46,3 +47,5 @@ mixin card-review-video(data)
           link: 'https://www.youtube.com/watch?v=7_-iNufEXsM',
           preview: '/img/common/preview-video-review'
         })
+
+

@@ -1,0 +1,11 @@
+mixin services-for-auto()
+  section.section-services-for-auto
+    .container
+      .services-for-auto
+        .services-for-auto__label: span car brands
+        .services-for-auto__title We provide Automotive Locksmith services for
+        .services-for-auto__list
+          each item, index in app.auto   
+            .services-for-auto__item
+              .services-for-auto__logo: +picturePng('/img/brand/'+(index+1)+'')
+              .services-for-auto__text= item.text 

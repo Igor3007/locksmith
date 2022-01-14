@@ -7,10 +7,10 @@ mixin picture2(url)
     source(srcset='/img/crop/w1200/'+url+'.webp' type="image/webp" media='(min-width: 767px)')
     source(srcset='/img/crop/w760/'+url+'.webp' type="image/webp" media='(min-width: 480px)')
 
-    source(srcset='/img/'+url+'.jpg' media='(min-width: 1200px)')
-    source(srcset='/img/crop/w1200/'+url+'.jpg' media='(min-width: 767px)')
-    source(srcset='/img/crop/w760/'+url+'.jpg' media='(min-width: 480px)')
-    img(src='/img/crop/w480/'+url+'.jpg ' loading='lazy' alt='Background')
+    source(srcset='/img/'+url+'.jpg' type="image/jpeg" media='(min-width: 1200px)')
+    source(srcset='/img/crop/w1200/'+url+'.jpg' type="image/jpeg" media='(min-width: 767px)')
+    source(srcset='/img/crop/w760/'+url+'.jpg' type="image/jpeg" media='(min-width: 480px)')
+    img(src='/img/crop/w480/'+url+'.jpg ' loading='lazy' alt='Image')
 
 mixin picture(url)
   picture
@@ -25,18 +25,22 @@ mixin pictureResp(url)
 
     if(url.w1200)
       source(srcset=''+url.w1200+'.webp' type="image/webp" media='(min-width: 1200px)')
-      source(srcset=''+url.w1200+'.jpg' type="image/jpg" media='(min-width: 1200px)')
+      source(srcset=''+url.w1200+'.jpg' type="image/jpeg" media='(min-width: 1200px)')
 
     if(url.w760)
       source(srcset=''+url.w760+'.webp' type="image/webp" media='(min-width: 767px)')
-      source(srcset=''+url.w760+'.jpg' type="image/jpg" media='(min-width: 767px)')
+      source(srcset=''+url.w760+'.jpg' type="image/jpeg" media='(min-width: 767px)')
 
     if(url.w480)
       source(srcset=''+url.w480+'.webp' type="image/webp" media='(min-width: 480px)')
-      source(srcset=''+url.w480+'.jpg' type="image/jpg" media='(min-width: 480px)')
+      source(srcset=''+url.w480+'.jpg' type="image/jpeg" media='(min-width: 480px)')
 
     if(url.def)
-      img(src=''+url.def+'.jpg' loading='lazy' alt='Background')
+      source(srcset=''+url.def+'.webp' type="image/webp"  )
+      if(!url.lazy)
+        img(src=''+url.def+'.jpg' loading='lazy' alt='Image')
+      else
+        img(src=''+url.def+'.jpg' alt='Image')
 
 
 mixin icons(id, size)

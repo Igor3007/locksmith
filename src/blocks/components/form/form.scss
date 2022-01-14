@@ -26,32 +26,32 @@ input {
 
 
     & select {
-        padding-right: 25px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
+        // padding-right: 25px;
+        // -webkit-appearance: none;
+        // -moz-appearance: none;
+        // appearance: none;
 
-        height: 61px;
-        padding-left: rem(35);
-        min-width: calc(100% - 50px);
-        cursor: pointer;
-        outline: none;
-        font-size: 18px;
+        // height: 61px;
+        // padding-left: rem(35);
+        // min-width: calc(100% - 50px);
+        // cursor: pointer;
+        // outline: none;
+        // font-size: 18px;
 
-        width: 100%;
-        color: #000;
-        background-color: #F5F5F5;
-        border: 1px solid #E1E1E1;
-        border-radius: 10px;
+        // width: 100%;
+        // color: #000;
+        // background-color: #F5F5F5;
+        // border: 1px solid #E1E1E1;
+        // border-radius: 10px;
 
-        & option {
-            font-family: 'arial';
-            font-size: 18px;
-        }
+        // & option {
+        //     font-family: 'arial';
+        //     font-size: 18px;
+        // }
 
-        &::-ms-expand {
-            display: none;
-        }
+        // &::-ms-expand {
+        //     display: none;
+        // }
     }
 
 

@@ -1,7 +1,8 @@
 mixin select(data)
-  select
-    each item, index in data
-      option(value=index)= item
+  .select
+    select
+      each item, index in data
+        option(value=index)= item
 
 mixin select-fill(data)
   .select.select-fill

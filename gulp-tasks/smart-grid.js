@@ -26,8 +26,8 @@ gulp.task("smart-grid", (cb) => {
             w576: {
                 width: "576px"
             },
-            w768: {
-                width: "768px"
+            w767: {
+                width: "767px"
             },
             w992: {
                 width: "992px"

@@ -1,8 +1,9 @@
 .header-top
-  .header-top__wrp
-    +icons('#ic_call24')
-    span Emergency Locksmith
-    +icons('#ic_arr-right', 18)
+  a(href="/" alt="link")
+    .header-top__wrp
+      +icons('#ic_call24')
+      span Emergency Locksmith
+      +icons('#ic_arr-right', 18)
 
 .header-main
   .container.container--large
@@ -14,7 +15,7 @@
           span
 
       .header__logo
-        a(href='/')
+        a(href='/' title="Logo")
           span.bgimage(style="background-image: url(/img/common/logo.svg)") 
 
       .header__nav
@@ -22,7 +23,7 @@
           ul.nav-menu
             each item in app.mainMenu
               li
-                a(href=item.href)
+                a(href=item.href alt="link menu")
                   span= item.text
                   if(item.sub)
                     span.arrow-menu
@@ -30,19 +31,19 @@
                   ul.sub-menu
                     each sub in item.sub
                       li
-                        a(href='#')
+                        a(href=sub.href alt="link menu")
                           span= sub.text
                           if(sub.sub)
                             span.arrow-menu
                         if(sub.sub)
                           ul.sub-menu
                             each sub2 in sub.sub
-                              li: a(href='#')= sub2.text
-        span.close-menu(data-menu="close"): +icons('#ic_cross', 40)
+                              li: a(href='#' alt="link menu")= sub2.text
+        span.close-menu(data-menu="close"): +icons('#ic_cross', 35)
 
       .header__phones
         .header__number: a(href='#')
-          a(href='#') (604) 227 - 9083
+          a(href='#' alt="contact phone") (604) 227 - 9083
 
       .header__btn
         button.btn Get free Quote

@@ -6,15 +6,18 @@ include ../../blocks/modules/contact-block/contact-block.pug
 
 block variables
   include ../../data/data.pug
-  - const title = "locksmith"
+  - const title = "locksmith - location"
 
 
 block content
 
-  +first-block-min()
+  +first-block-min({
+    title: 'Our Locations',
+    breadcrumb: [ 'Main', 'Our Locations']
+  })
   +areas-block({modify: 'min'})
   +contact-block({modify: 'min'})
 
 
 block scripts
-  script(src="/js/page/home.js")
+  script(src="/js/page/common.js")

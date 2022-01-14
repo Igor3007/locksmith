@@ -1,0 +1,11 @@
+include ../../components/faq/faq.pug
+
+mixin block-faq()
+  section.section-block-faq
+    .container
+      .block-faq
+        .block-faq__left
+          .block-faq__label: span question and answer
+          .block-faq__title FAQ
+
+        .block-faq__right: +faq(app.faq)

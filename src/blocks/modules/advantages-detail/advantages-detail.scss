@@ -1,0 +1,16 @@
+.section-advantages-detail {
+    @include section-padding;
+}
+
+.advantages-detail {
+    &__list {
+        @include row-flex;
+    }
+
+    &__item {
+        @include col();
+        @include size(12);
+        @include size-w992(6);
+        margin-bottom: 30px;
+    }
+}

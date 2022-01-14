@@ -10,20 +10,23 @@ mixin video-block
             preview: '/img/common/video-preview',
             title: 'Video about our work',
           })
-        .video-block__contact
-          .video-block__alltime
-            +icons('#ic_call24red', 63)
-            span Service call
+        .video-block__contact: +aside-contact()
 
-          .video-block__worktime
-            .item-worktime
-              .item-worktime__hour 8:30 AM - 7:00 PM
-              .item-worktime__cost $95 + tax
-            .item-worktime
-              .item-worktime__hour 7:00 PM - 8:30 AM
-              .item-worktime__cost $250 + tax
 
-          .video-block__note In case of cancellation after 7 pm you will be charged for service call.
-          .video-block__btn
-            button.btn Contact
+mixin aside-contact()
+  .aside-contact
+    .aside-contact__alltime
+      +icons('#ic_call24red', 63)
+      span Service call
 
+    .aside-contact__worktime
+      .item-worktime
+        .item-worktime__hour 8:30 AM - 7:00 PM
+        .item-worktime__cost $95 + tax
+      .item-worktime
+        .item-worktime__hour 7:00 PM - 8:30 AM
+        .item-worktime__cost $250 + tax
+
+    .aside-contact__note In case of cancellation after 7 pm you will be charged for service call.
+    .aside-contact__btn
+      button.btn Contact

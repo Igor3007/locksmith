@@ -1,6 +1,6 @@
 @import "common/header/header";
 @import "common/footer/footer";
-//@import "common/page-404/page-404.scss";
+@import "common/page-404/page-404.scss";
 //@import "common/main-menu/main-menu.scss";
 
 /* home */
@@ -15,3 +15,9 @@
 @import "contact-block/contact-block.scss";
 
 /* home */
+
+/* detail location */
+@import "advantages-detail/advantages-detail.scss";
+@import "block-faq/block-faq.scss";
+@import "detail-fulltext/detail-fulltext.scss";
+@import "services-for-auto/services-for-auto.scss";

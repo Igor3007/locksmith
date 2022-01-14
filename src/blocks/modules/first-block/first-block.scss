@@ -63,6 +63,11 @@
         line-height: 140%;
         color: #B7B7B7;
 
+        & a {
+            color: #B7B7B7;
+            text-decoration: underline;
+        }
+
         @media screen and (min-width: $w760) {
             font-size: 28px;
         }
@@ -87,6 +92,33 @@
 
             @media screen and (min-width: $w1440) {
                 padding: 125px 0 80px 0;
+            }
+        }
+    }
+
+    &--detail {
+        & .first-block__content {
+            padding: 100px 0 20px 0;
+
+            @media screen and (min-width: $w1200) {
+                padding: 145px 0 50px 0;
+
+                & .container {
+                    align-items: center;
+                }
+            }
+
+            @media screen and (min-width: $w1440) {
+                padding: 155px 0 70px 0;
+
+            }
+        }
+
+        & .first-block__form {
+            padding-top: 20px;
+
+            @media screen and (min-width: $w1200) {
+                padding-top: 0;
             }
         }
     }
@@ -137,6 +169,11 @@
     padding: 25px;
     color: #000;
     border-radius: 10px;
+
+    @media screen and (min-width: $w1200) {
+        max-width: 440px;
+        width: 100vw;
+    }
 
     @media screen and (min-width: $w1440) {
         padding: 54px;
@@ -228,10 +265,13 @@
 
     &__icon {
 
-        & picture {
+        & picture img {
             width: 27px;
             height: 27px;
             display: block;
+            object-fit: contain;
+
+
 
             @media screen and (min-width: $w576) {
                 width: 41px;
@@ -258,18 +298,57 @@
     }
 
     & .rating-star {
-        width: 57px;
-        height: 8px;
-        display: inline-block;
-        background-size: contain;
-        background-position: left center;
-        background-repeat: no-repeat;
+
+        position: relative;
         margin-left: 7px;
+        width: 57px;
 
         @media screen and (min-width: $w576) {
             width: 92px;
-            height: 13px;
         }
+
+        &__gray {
+            width: 57px;
+            height: 8px;
+            display: block;
+            background-size: 57px 8px;
+            background-position: left center;
+            background-repeat: no-repeat;
+
+            filter: grayscale(1);
+            opacity: 0.5;
+            position: relative;
+            z-index: 1;
+
+            @media screen and (min-width: $w576) {
+                width: 92px;
+                height: 13px;
+                background-size: 92px 13px;
+            }
+        }
+
+        &__current {
+
+
+            display: block;
+            background-size: contain;
+            background-position: left center;
+            background-repeat: no-repeat;
+            background-size: 57px 8px;
+
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+
+            @media screen and (min-width: $w576) {
+                background-size: 92px 13px;
+            }
+        }
+
+
     }
 
     & .average-value {

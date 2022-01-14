@@ -28,7 +28,11 @@ mixin card-review(data)
         +picture(data.image)
       .card-review__userdata
         .card-review__name= data.name
-        .card-review__stars: span.review-stars(style="background-image: url('/img/svg/ic_rating.svg')")
+        .card-review__stars
+          span.review-stars 
+            span.review-stars__gray(style="background-image: url('/img/svg/ic_rating.svg')")
+            span.review-stars__current(style="background-image: url('/img/svg/ic_rating.svg'); width: 40%" )
+
     .card-review__main
       .card-review__text
         span= data.text
@@ -40,7 +44,10 @@ mixin card-review-video(data)
         +picture(data.image)
       .card-review__userdata
         .card-review__name= data.name
-        .card-review__stars: span.review-stars(style="background-image: url('/img/svg/ic_rating.svg')")
+        .card-review__stars
+          span.review-stars 
+            span.review-stars__gray(style="background-image: url('/img/svg/ic_rating.svg')")
+            span.review-stars__current(style="background-image: url('/img/svg/ic_rating.svg'); width: 40%" )
     .card-review__main
       .card-review__video
         +video-review({

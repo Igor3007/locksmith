@@ -1,0 +1,63 @@
+.section-services-for-auto {
+    @include section-padding;
+
+    @media screen and (min-width: $w1200) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    background-color: #F6F6F6;
+
+}
+
+.services-for-auto {
+    &__title {
+        @include section-title;
+
+        padding-bottom: 25px;
+
+        @media screen and (min-width: $w1200) {
+            padding-bottom: 45px;
+        }
+    }
+
+    &__label {
+        @include section-label;
+    }
+
+    &__list {
+        @include row-flex;
+    }
+
+    &__item {
+        @include col;
+        @include size(12);
+        @include size-w576(6);
+        @include size-w992(4);
+    }
+}
+
+.services-for-auto {
+    &__logo {
+        & picture {
+            & img {
+                width: 30px;
+                height: 30px;
+                object-fit: contain;
+                object-position: center;
+                mix-blend-mode: multiply;
+            }
+        }
+    }
+
+    &__text {
+        font-size: 18px;
+        padding-left: 35px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+    }
+}

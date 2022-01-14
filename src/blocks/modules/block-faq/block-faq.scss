@@ -1,0 +1,30 @@
+.section-block-faq {
+    @include section-padding;
+}
+
+.block-faq {
+
+    @include row-flex;
+
+    &__right {
+        @include col;
+        @include size(12);
+        @include size-w992(8);
+    }
+
+    &__left {
+        @include col;
+        @include size(12);
+        @include size-w992(4);
+    }
+
+
+    &__label {
+        @include section-label;
+    }
+
+    &__title {
+        @include section-title;
+        padding-bottom: 35px;
+    }
+}

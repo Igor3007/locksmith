@@ -89,7 +89,7 @@
     &__item {
         @include col;
         @include size(12);
-        @include size-w768(6);
+        @include size-w767(6);
         @include size-w992(4);
     }
 }

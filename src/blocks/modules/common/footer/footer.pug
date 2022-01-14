@@ -4,7 +4,7 @@
     .footer
 
       .footer__logo
-        a(href='/')
+        a(href='/' title="logo")
           span.bgimage(style="background-image: url(/img/common/logo.svg)") 
 
       .footer__nav
@@ -12,7 +12,7 @@
           ul.nav-menu
             each item in app.mainMenu
               li
-                a(href=item.href)
+                a(href=item.href alt="")
                   span= item.text
                   if(item.sub)
                     span.arrow-menu
@@ -25,7 +25,7 @@
 
       .footer__phones
         .footer__number
-          a(href='#') (604) 227 - 9083
+          a(href='#' alt="contact phone") (604) 227 - 9083
 
       .footer__btn
         button.btn Get free Quote
@@ -34,9 +34,9 @@
   .container.container--large
     .footer-copyright__text Copyright © 2021. Fast Locksmith Vancouver. All Rights Reserved
     .footer-copyright__privacy
-      a(href='#') Privacy Policy
+      a(href='#' title="Privacy Policy" ) Privacy Policy
       ||
-      a(href='#') Terms & Conditions
+      a(href='#' title="Terms & Conditions" ) Terms & Conditions
 
 
 

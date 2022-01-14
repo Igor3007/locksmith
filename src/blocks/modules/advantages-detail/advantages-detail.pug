@@ -1,0 +1,10 @@
+include ../advantages-block/advantages-block.pug
+
+mixin advantages-detail()
+  section.section-advantages-detail
+    .container
+      .advantages-detail
+        .advantages-detail__list
+          each item in app.advantages
+            .advantages-detail__item
+              +item-advantages(item)

@@ -130,10 +130,12 @@ header {
         & .btn {
             height: 48px;
             font-size: 14px;
+            width: 130px;
 
             @media screen and (min-width: $w576) {
                 height: 60px;
                 font-size: 18px;
+                width: auto;
             }
         }
     }
@@ -182,7 +184,7 @@ header {
         display: none;
 
         & li {
-            padding-top: 10px;
+            padding-top: 16px;
         }
 
         & a {
@@ -194,7 +196,7 @@ header {
 
 
     &>li {
-        padding-bottom: 10px;
+        padding-bottom: 20px;
 
 
         @media screen and (min-width: $w1440) {
@@ -281,9 +283,9 @@ header {
                     display: block;
                     padding-left: 15px;
 
-                    @media screen and (min-width: $w1200) {
-                        padding-left: 0;
-                    }
+
+                    padding-left: 0;
+
                 }
             }
         }
@@ -291,6 +293,7 @@ header {
         &.show-sub {
             &>a {
 
+                font-weight: bold;
 
                 & .arrow-menu {
                     transform: rotate(180deg);
@@ -309,11 +312,14 @@ header {
 
         & li {
 
+            @media screen and (min-width: $w1200) {
+                border-left: 2px solid #cacaca;
 
-
-            &:hover {
-                @media screen and (min-width: $w1200) {
-                    background-color: #f6f6f6;
+                &:hover {
+                    @media screen and (min-width: $w1200) {
+                        background-color: #f6f6f6;
+                        border-left: 2px solid $red;
+                    }
                 }
             }
 

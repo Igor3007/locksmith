@@ -1,0 +1,35 @@
+extends ../layouts/index
+
+include ../../blocks/modules/first-block/first-block.pug
+include ../../blocks/modules/advantages-detail/advantages-detail.pug
+include ../../blocks/modules/detail-fulltext/detail-fulltext.pug
+include ../../blocks/modules/our-clients/our-clients.pug
+include ../../blocks/modules/our-rewiew/our-rewiew.pug
+include ../../blocks/modules/block-faq/block-faq.pug
+include ../../blocks/modules/contact-block/contact-block.pug
+
+
+
+block variables
+  include ../../data/data.pug
+  - const title = "locksmith - location detail"
+
+
+block content
+
+  +first-block-detail({
+    title: 'Locksmith North Vancouver',
+    subtitle: 'Instant response a prices you can afford <br> Call us today at (604)227-9083 ',
+  })
+
+  +advantages-detail()
+  +detail-fulltext()
+  +our-clients()
+  +our-rewiew()
+  +block-faq()
+  +contact-block({modify: 'min'})
+
+
+block scripts
+  script(src="/js/page/common.js")
+  script(src="/js/page/location-detail.js")

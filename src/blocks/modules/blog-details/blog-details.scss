@@ -1,0 +1,119 @@
+.section-blog-details {
+    @include section-padding;
+}
+
+.blog-details {
+
+    &__image {
+        & picture {
+            width: 100%;
+            display: block;
+
+            & img {
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    &__wrp {
+        max-width: 955px;
+        margin: 0 auto;
+    }
+
+    &__prop {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 20px 0;
+        border-bottom: 1px solid #eee;
+
+        @media screen and (min-width: $w576) {
+            padding: 25px 0;
+        }
+
+        & div {
+            margin-right: 25px;
+        }
+
+        &-autor {
+
+            display: flex;
+            align-items: center;
+
+            & span {
+                margin-left: 10px;
+            }
+        }
+
+        &-tags {
+
+            display: flex;
+            align-items: center;
+
+            width: 100%;
+            padding-top: 25px;
+
+            @media screen and (min-width: $w576) {
+                width: auto;
+                padding-top: 0;
+            }
+
+            & ul {
+                display: flex;
+                padding-left: 10px;
+
+                & li {
+                    margin-right: 5px;
+
+                    &::after {
+                        content: ',';
+                    }
+
+                    &:last-child {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__fulltext {
+
+        line-height: 150%;
+        color: #666;
+
+        @media screen and (min-width: $w1200) {
+            margin-left: 65px;
+        }
+    }
+
+    &__back {
+
+        border-top: 1px solid #eee;
+        padding: 20px 0;
+        margin-top: 45px;
+
+        @media screen and (min-width: $w1200) {
+            margin-left: 65px;
+        }
+
+        & a {
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            & span {
+                padding-left: 15px;
+                font-weight: bold;
+            }
+        }
+    }
+
+
+}

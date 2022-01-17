@@ -1,0 +1,26 @@
+include ../first-block/first-block.pug
+
+mixin contact-page
+  section.section-contact-page
+    .container
+      .contact-page
+        .contact-page__contacts
+          .contact-page__data
+            ul
+              li
+                span Phone
+                p: a(href='tel:6042279083' class="phone-contact-page") (604)227-9083
+              li
+                span Email
+                p: a(href='mailto:fastlocksmith24hour@gmail.com') fastlocksmith24hour@gmail.com
+              li
+                span Working hours
+                p Open 24 hours 7 days a week
+              li
+                span Locations
+                p 323 Renfrew St Vancouver, BC
+          .contact-page__rating
+            each item in app.rating
+              +rating-badge(item) 
+        .contact-page__map
+          iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5842.9556210860965!2d-123.05672852396171!3d49.28130850437493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867120975c3103%3A0xbcbc12ed0d6cf14e!2sAtrium%20Inn%20Vancouver!5e0!3m2!1sru!2sby!4v1642407055909!5m2!1sru!2sby" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy")

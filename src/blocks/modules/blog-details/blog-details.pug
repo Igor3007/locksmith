@@ -1,0 +1,55 @@
+mixin blog-details
+  section.section-blog-details
+    .container
+      .blog-details
+        .blog-details__wrp
+          .blog-details__image
+            +picture('/img/common/advantages-img')
+          .blog-details__prop
+            .blog-details__prop-date: span.blog-date 12.12.2021
+            .blog-details__prop-autor
+              +icons('#ic_user', 12)
+              span Admin
+            .blog-details__prop-tags
+              +icons('#ic_tags', 16)
+              ul
+                li Lock
+                li locksmith
+          .blog-details__fulltext.formated-text
+            p Vancouver Door Repair Service is a company that offers a huge range of door repair services in Vancouver. They cover you in any instance be it at your place of residence or your place of work. No matter the problem, the company will be there for you to take care of all your door repair needs. It does not matter whether it is the normal wear and tear of doors or emergency door repairs that require immediate attention.
+            p If you are a resident of Port Coquitlm, North Vancouver, Coquitlam, West Vancouver and Port Moody, then you can access Vancouver Door Repair Service easily. The company is open 24 hours everyday. The service is quite affordable and there are different discount rates for different groups of people. Some of the Vancouver residential door repair services include the following:
+            p You are able to get the service within 20 minutes after calling for help. The response time is quite encouraging and this complements to the quality of service offered. This is important especially if it is an emergency case. Vancouver Door Repair Service not only covers residential doors but also commercial door repairs. Some of the services offered to businesses include the following:
+
+            h1 Header 1
+            h2 Header 2
+            h3 Header 3
+            h4 Header 4
+            h5 Header 5
+            h6 Header 6
+
+            ul
+              li marker list
+              li marker list
+              li marker list
+              li marker list
+              li marker list
+              li marker list
+
+            ol
+              li numbered list
+              li numbered list
+              li numbered list
+              li numbered list
+              li numbered list
+              li numbered list
+
+            a(href='#') link <br>
+
+            strong bold text <br>
+
+            em italic <br>
+
+          .blog-details__back
+            a(href='#')
+              +icons('#ic_link-back', 38)
+              span Back

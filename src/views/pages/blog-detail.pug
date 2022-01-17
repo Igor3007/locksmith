@@ -1,0 +1,25 @@
+extends ../layouts/index
+
+include ../../blocks/modules/first-block/first-block.pug
+include ../../blocks/modules/contact-block/contact-block.pug
+include ../../blocks/modules/blog-details/blog-details.pug
+
+block variables
+  include ../../data/data.pug
+  - const title = "locksmith - location"
+
+
+block content
+
+  +first-block-min({
+    title: 'Is picking a lock easy?',
+    breadcrumb: [ 'Main', 'Blog', 'Is picking a lock easy?']
+  })
+
+  +blog-details()
+
+  +contact-block({modify: 'min'})
+
+
+block scripts
+  script(src="/js/page/common.js")

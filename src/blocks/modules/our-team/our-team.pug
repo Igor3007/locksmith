@@ -1,0 +1,21 @@
+mixin our-team()
+  section.section-our-team
+    .container
+      .our-team
+        .our-team__label: span Our
+        .our-team__title Fast Locksmith Team
+        .our-team__desc Fast Locksmith 24/7 provides a wide range of emergency locksmith services across Vancouver. All of our services are available 24 hours a day and we guarantee a 20 minute response time for all emergencies. We guarantee to beat our competitors’ prices every time and even offer a 10% discount to customers who have been a victim of crime, as well as home owners, seniors, and students. Our wide range of services includes all lockouts as well as door repair and also rekeys if required.
+        .our-team__slider
+          .glide(data-glide='team')
+            .glide__track(data-glide-el='track')
+              .glide__slides
+                each item in [1,2,3,2]
+                  .glide__slide
+                    .item-team
+                      .item-team__img
+                        +picture('/img/common/team'+item)
+                      .item-team__name Denny
+          .glide-nav
+            .glide-nav__prev(data-glide-prev="team"): +icons('#ic_swiper-prev', 35)
+            .glide-nav__counter <span class="team-counter-current">1</span> of <span class="team-counter-total">0</span>
+            .glide-nav__next(data-glide-next="team"): +icons('#ic_swiper-next', 35)

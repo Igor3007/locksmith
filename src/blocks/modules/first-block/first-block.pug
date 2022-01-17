@@ -41,6 +41,24 @@ mixin first-block-detail(data)
             .first-block__subtitle!= data.subtitle
           .first-block__form: +order-form()
 
+mixin first-block-noform(data)
+  section.section-first-block
+    .first-block.first-block--noform
+      .first-block__bg
+        +pictureResp({
+          w1200: '/img/common/first-block-bg',
+          w760: '/img/common/first-block-bg_760',
+          w480: '/img/common/first-block-bg_480',
+          def: '/img/common/first-block-bg_480',
+          lazy: true
+        })
+      .first-block__content
+        .container
+          .page-head
+            .page-head__title: h1= data.title
+            .page-head__subtitle!= data.subtitle
+
+
 
 mixin first-block-min(data)
   section.section-first-block

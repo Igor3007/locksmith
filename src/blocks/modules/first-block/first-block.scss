@@ -162,6 +162,36 @@
             }
         }
     }
+
+    &__subtitle {
+        padding-bottom: 25px;
+        font-size: 18px;
+        line-height: 140%;
+        color: #B7B7B7;
+        padding-top: 15px;
+
+        @media screen and (min-width: $w760) {
+            font-size: 28px;
+        }
+
+        @media screen and (min-width: $w1200) {
+            padding-bottom: 58px;
+            text-align: center;
+        }
+
+        & br {
+            display: none;
+
+            @media screen and (min-width: $w760) {
+                display: inline;
+            }
+        }
+
+        & a {
+            color: #B7B7B7;
+            text-decoration: underline;
+        }
+    }
 }
 
 .order-form {

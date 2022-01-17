@@ -12,6 +12,30 @@ mixin video-block
           })
         .video-block__contact: +aside-contact()
 
+mixin video-block-about
+  section.section-video-block
+    .container.container--large
+      .video-block
+        .video-block__player
+          +video({
+            link: 'https://www.youtube.com/watch?v=7_-iNufEXsM',
+            preview: '/img/common/video-preview',
+            title: 'Video about our work',
+          })
+        .video-block__contact: +aside-list()
+
+mixin aside-list
+  .aside-list
+    .aside-list__subtitle What you get from us
+    .aside-list__list
+      ul
+        li We tell you the exact cost before beginning any job.
+        li A quality & efficient service using only the best 
+        li Quality materials for all jobs.
+        li An emergency locksmith committed to hard work.
+        li A quality of service you can rely on.
+
+
 
 mixin aside-contact()
   .aside-contact

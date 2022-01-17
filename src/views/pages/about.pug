@@ -1,0 +1,33 @@
+extends ../layouts/index
+
+include ../../blocks/modules/first-block/first-block.pug
+include ../../blocks/modules/contact-block/contact-block.pug
+include ../../blocks/modules/our-clients/our-clients.pug
+include ../../blocks/modules/our-rewiew/our-rewiew.pug
+include ../../blocks/modules/our-team/our-team.pug
+include ../../blocks/modules/video-block/video-block.pug
+
+block variables
+  include ../../data/data.pug
+  - const title = "locksmith - location"
+
+
+block content
+
+  +first-block-noform({
+    title: 'About Fast Locksmith',
+    subtitle: 'Instant response a prices you can afford <br> Call us today at (604)227-9083 '
+  })
+
+  +video-block-about()
+
+  +our-team()
+
+  +our-clients()
+  +our-rewiew()
+  +contact-block({modify: 'min'})
+
+
+block scripts
+  script(src="/js/page/common.js")
+  script(src="/js/page/about.js")

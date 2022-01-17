@@ -76,10 +76,10 @@
 
   review.mount();
 
-  document.querySelector('[data-swiper-prev="review"]').addEventListener('click', function(){
+  document.querySelector('[data-glide-prev="review"]').addEventListener('click', function(){
     review.go('<')
   })
-  document.querySelector('[data-swiper-next="review"]').addEventListener('click', function(){
+  document.querySelector('[data-glide-next="review"]').addEventListener('click', function(){
     review.go('>')
   })
 

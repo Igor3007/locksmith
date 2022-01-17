@@ -1,40 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  //   /* inputmask */
 
-  // if(document.querySelector("input[type=tel]")){
-  //   const IMaskPhone = new Inputmask("9(999)999-99-99")
-  //   IMaskPhone.mask(document.querySelector("input[type=tel]"))
-  // }
-
- 
-
-  /******************************************** 
-  * mobile menu
-  ********************************************/
-  document.querySelector('.btn-burger').addEventListener('click', function(){
-    document.querySelector('.header__nav').classList.toggle('open')
-  })
-
-  document.querySelector('[data-menu="close"]').addEventListener('click', function(){
-    document.querySelector('.header__nav').classList.remove('open')
-  })
-
-  document.querySelectorAll('.arrow-menu').forEach(function(item, index){
-    item.addEventListener('click', function(event){
-      event.stopPropagation()
-      event.preventDefault()
-
-      if(document.querySelector('.nav-menu .show-sub')){
-        document.querySelector('.nav-menu .show-sub').classList.remove('show-sub')
-      }else{
-        this.parentNode.parentNode.classList.toggle('show-sub')
-      }
-
-      
-    })
-  })
 
   /******************************************** 
   * faq

@@ -16,10 +16,10 @@ mixin our-rewiew
                       +card-review(item)
                     if(item.type == "video")
                       +card-review-video(item)
-          .swiper-nav
-            .swiper-nav__prev(data-swiper-prev="review"): +icons('#ic_swiper-prev', 35)
-            .swiper-nav__counter Review <span class="review-counter-current">1</span> of <span class="review-counter-total">4</span>
-            .swiper-nav__next(data-swiper-next="review"): +icons('#ic_swiper-next', 35)
+          .glide-nav
+            .glide-nav__prev(data-glide-prev="review"): +icons('#ic_swiper-prev', 35)
+            .glide-nav__counter Review <span class="review-counter-current">1</span> of <span class="review-counter-total">4</span>
+            .glide-nav__next(data-glide-next="review"): +icons('#ic_swiper-next', 35)
 
 mixin card-review(data)
   .card-review

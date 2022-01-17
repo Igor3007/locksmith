@@ -1,0 +1,59 @@
+.section-our-team {
+    @include section-padding;
+}
+
+.our-team {
+    &__label {
+        @include section-label;
+    }
+
+    &__title {
+        @include section-title;
+        padding-bottom: 45px;
+    }
+
+    &__desc {
+        max-width: 850px;
+        font-size: 18px;
+        line-height: 140%;
+        color: #666;
+    }
+
+    &__slider {
+        position: relative;
+        padding-top: 56px;
+    }
+}
+
+.item-team {
+
+    @media screen and (min-width: $w760) {
+        max-width: 400px;
+    }
+
+    & picture {
+        position: relative;
+        padding-top: 100%;
+        display: block;
+        background-color: #eee;
+        border-radius: 10px;
+        overflow: hidden;
+
+        & img {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+
+    &__name {
+        color: #838383;
+        text-align: center;
+        font-size: 18px;
+        padding: 17px 0;
+    }
+}

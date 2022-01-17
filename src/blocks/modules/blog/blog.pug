@@ -1,0 +1,12 @@
+include ../../modules/our-blog/our-blog
+include ../../components/pagination/pagination.pug
+
+mixin blog
+  section.section-blog
+    .container
+      .blog
+        .blog__list
+          each item in [1,2,3,3,4,4,4,4,4,4,4,4,4,4,]
+            .blog__item
+              +blog-mini
+  +pagination()

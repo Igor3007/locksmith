@@ -1,0 +1,32 @@
+.section-blog {
+    @include section-padding;
+
+
+}
+
+.blog {
+    &__list {
+        @include row-flex;
+    }
+
+    &__item {
+        @include col;
+        @include size(12);
+        @include size-w767(6);
+        margin-bottom: 55px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media screen and (min-width: $w760) {
+            margin-bottom: 95px;
+        }
+
+        & .blog-mini {
+            @media screen and (min-width: $w1024) {
+                max-width: 585px;
+            }
+        }
+    }
+}

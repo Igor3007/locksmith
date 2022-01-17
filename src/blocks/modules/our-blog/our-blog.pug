@@ -30,11 +30,15 @@ mixin our-blog
                       +icons('#ic_link-arrow', 38)
                       span Learn more
               .our-blog__item
-                .blog-mini
-                  .blog-mini__date: span.blog-date 12.12.2021
-                  .blog-mini__title: a(href='#') Which locks are the hardest to pick?
-                  .blog-mini__desc: span As a general guideline, combination locks are more difficult to select (fracture) than the pin and also stemless glass locks. The exemption is baggage combo locks, the code to which 
-                  .blog-mini__more
-                    a(href="#")
-                      +icons('#ic_link-arrow', 38)
-                      span Learn more
+                +blog-mini
+
+
+mixin blog-mini
+  .blog-mini
+    .blog-mini__date: span.blog-date 12.12.2021
+    .blog-mini__title: a(href='#') Which locks are the hardest to pick?
+    .blog-mini__desc: span As a general guideline, combination locks are more difficult to select (fracture) than the pin and also stemless glass locks. The exemption is baggage combo locks, the code to which 
+    .blog-mini__more
+      a(href="#")
+        +icons('#ic_link-arrow', 38)
+        span Learn more

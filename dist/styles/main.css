@@ -1578,6 +1578,71 @@ input {
   transition: 0.3s ease;
 }
 
+.section-pagination {
+  padding: 40px 0;
+  padding-top: 0 !important;
+  padding-bottom: 75px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.pagination__page {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pagination__page ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.pagination__page ul li {
+  margin-left: 10px;
+}
+
+.pagination__page ul li:first-child {
+  margin-left: 0;
+}
+
+.pagination__page ul li.active a {
+  background-color: #BF3232;
+  color: #fff;
+}
+
+.pagination__page ul li.active a svg {
+  fill: #fff;
+}
+
+.pagination__page ul li a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  color: #222B32;
+  background-color: #f1f1f1;
+}
+
+.pagination__page ul li a svg {
+  fill: #000;
+}
+
+.pagination__page ul li a:hover {
+  background-color: #BF3232;
+  color: #fff;
+}
+
+.pagination__page ul li a:hover svg {
+  fill: #fff;
+}
+
 header {
   position: relative;
 }
@@ -3220,6 +3285,32 @@ footer {
   padding: 17px 0;
 }
 
+/* blog */
+
+.section-blog {
+  padding: 40px 0;
+}
+
+.blog__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.blog__item {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: calc(100% - 40px);
+  margin-bottom: 55px;
+}
+
+.blog__item:last-child {
+  margin-bottom: 0;
+}
+
 @media screen and (min-width: 576px) {
   .container {
     padding: 0 15px;
@@ -3240,6 +3331,10 @@ footer {
     height: 60px;
     margin-left: -30px;
     margin-top: -30px;
+  }
+
+  .section-pagination {
+    padding: 70px 0;
   }
 
   .header__btn .btn {
@@ -3362,6 +3457,10 @@ footer {
   }
 
   .section-our-team {
+    padding: 70px 0;
+  }
+
+  .section-blog {
     padding: 70px 0;
   }
 }
@@ -3742,12 +3841,29 @@ footer {
   .item-team {
     max-width: 400px;
   }
+
+  .blog__item {
+    width: calc(50% - 40px);
+  }
+
+  .blog__item {
+    margin-bottom: 95px;
+  }
 }
 
 @media screen and (min-width: 992px) {
   .container {
     padding: 0 30px;
     max-width: 990px;
+  }
+
+  .pagination__page {
+    margin-right: 0;
+  }
+
+  .pagination__page ul li a {
+    width: 55px;
+    height: 55px;
   }
 
   .footer__logo {
@@ -3941,6 +4057,10 @@ footer {
 @media screen and (min-width: 1025px) {
   .hidden {
     margin-right: 17px;
+  }
+
+  .blog__item .blog-mini {
+    max-width: 585px;
   }
 }
 

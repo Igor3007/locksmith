@@ -273,6 +273,14 @@
     margin: 0 5px;
     width: 50%;
 
+    &:hover {
+        & .rating-badge__title {
+            & a {
+                text-decoration: underline;
+            }
+        }
+    }
+
     @media screen and (min-width: $w576) {
         max-width: 244px;
     }

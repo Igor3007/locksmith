@@ -1,0 +1,25 @@
+extends ../layouts/index
+
+include ../../blocks/modules/first-block/first-block.pug
+include ../../blocks/modules/text-page/text-page.pug
+include ../../blocks/modules/contact-block/contact-block.pug
+
+block variables
+  include ../../data/data.pug
+  - const title = "locksmith - location"
+
+
+block content
+
+  +first-block-min({
+    title: 'Text Page',
+    breadcrumb: [ 'Main', 'Text Page']
+  })
+
+  +text-page()
+
+  +contact-block({modify: 'min'})
+
+
+block scripts
+  script(src="/js/page/common.js")

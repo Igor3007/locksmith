@@ -1,7 +1,6 @@
 extends ../layouts/page
 
 include ../../blocks/modules/common/page-404/page-404.pug
-include ../../blocks/modules/first-block/first-block.pug
 
 
 
@@ -12,9 +11,11 @@ block variables
 
 
 block content
-  +first-block-min({
-    title: 'Page not found',
-    breadcrumb: [ 'Main', '404']
-  })
   +page-404
+
+
+block scripts
+  script(src="/js/page/common.js")
+
+
 

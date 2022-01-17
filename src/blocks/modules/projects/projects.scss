@@ -1,0 +1,48 @@
+.section-projects {
+    @include section-padding;
+}
+
+.projects {
+    &__list {
+        @include row-flex;
+    }
+
+    &__item {
+        @include col;
+        @include size(12);
+        @include size-w767(6);
+        @include size-w992(4);
+
+        margin-bottom: 40px;
+    }
+}
+
+.item-project {
+    &__image {
+        & picture {
+            padding-top: 100%;
+            display: block;
+            position: relative;
+            background-color: #eee;
+            border-radius: 10px;
+            overflow: hidden;
+
+            & img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+            }
+        }
+    }
+
+    &__title {
+        padding: 20px;
+        text-align: center;
+        font-size: 18px;
+        color: #838383;
+    }
+}

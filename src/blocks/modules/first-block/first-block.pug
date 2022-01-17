@@ -101,7 +101,8 @@ mixin rating-badge(data)
       picture
         img(src=""+data.img+"" loading="lazy" alt="logo" width="27px" height="27px" )
     .rating-badge__desc
-      .rating-badge__title= data.title
+      .rating-badge__title
+        a(href='#')= data.title
       .rating-badge__star
         span.average-value 4.4
         span.rating-star

@@ -1,0 +1,15 @@
+mixin projects
+  section.section-projects
+    .container
+      .projects
+        .projects__list
+          each item in app.project
+            .projects__item
+              +item-project(item)
+
+mixin item-project(data)
+  .item-project
+    .item-project__image
+      a(href=""+data.image+".png" data-fancybox="project" data-caption=""+data.title+"")
+        +picture(data.image)
+    .item-project__title= data.title

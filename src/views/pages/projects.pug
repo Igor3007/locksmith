@@ -1,0 +1,27 @@
+extends ../layouts/index
+
+include ../../blocks/modules/first-block/first-block.pug
+include ../../blocks/modules/projects/projects.pug
+include ../../blocks/modules/contact-block/contact-block.pug
+
+block variables
+  include ../../data/data.pug
+  - const title = "locksmith - project"
+
+
+block content
+
+  +first-block-min({
+    title: 'Our Recent Projects',
+    breadcrumb: [ 'Main', 'Our Recent Projects']
+  })
+
+  +projects()
+
+  +contact-block({modify: 'min'})
+
+
+block scripts
+  script(src="/js/page/common.js")
+  script(src="/js/lib/fancybox.esm.js")
+
